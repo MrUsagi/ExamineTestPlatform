@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\student\Desktop\ExamineTestPlatform\src\Client\TestPlatformProject\App.xaml
-3-475448780
+4-269955914
 
-7-145719546
+8936412687
 1921654412462
-MainWindow.xaml;Pages\LoginPage.xaml;Pages\RegisterPage.xaml;
+MainWindow.xaml;Pages\AdminPage.xaml;Pages\LoginPage.xaml;Pages\RegisterPage.xaml;
 
 True
 
