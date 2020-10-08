@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2Qey8fBEfG8mAiYEQmvDMwhYebfPmN21msi/nKkZ15vFqdVY7xnEqPqiLAIMcQLodM2JB+C1gKCmfDeqxX3D5A==",
+  "dgSpecHash": "DNr46SCFlzRSy0MCOU1qgbUF1DhXaBa6eplBYmVqPTc1obMM71/UoCNiOoqSdfW7+eK6szLuyepEFSJb2GUT0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Student\\Desktop\\MyFOSSA\\ExamineTestPlatform\\src\\Client\\BusinessLogic\\BusinessLogic.csproj",
+  "projectFilePath": "C:\\Users\\Student\\Desktop\\ExamineTestPlatform\\src\\Client\\BusinessLogic\\BusinessLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
