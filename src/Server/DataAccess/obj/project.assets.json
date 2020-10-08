@@ -179,25 +179,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Student\\.nuget\\packages\\": {},
+    "C:\\Users\\student\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Student\\Desktop\\MyFOSSA\\ExamineTestPlatform\\src\\Server\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\student\\Desktop\\ExamineTestPlatform\\src\\Server\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\Student\\Desktop\\MyFOSSA\\ExamineTestPlatform\\src\\Server\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Student\\Desktop\\MyFOSSA\\ExamineTestPlatform\\src\\Server\\DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\student\\Desktop\\ExamineTestPlatform\\src\\Server\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\student\\Desktop\\ExamineTestPlatform\\src\\Server\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\student\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
