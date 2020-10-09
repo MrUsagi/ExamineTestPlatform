@@ -16,6 +16,9 @@ namespace DataAccess.Models
         public string Text { get; set; }
         public string ImageURL { get; set; }
         public bool IsManyAnswers { get; set; }
+        public int Weight { get; set; }
+        public int TestId { get; set; }
+        public Test Test { get; set; }
         public IEnumerable<Answer> Answers { get; set; }
     }
 }
