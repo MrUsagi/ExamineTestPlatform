@@ -10,21 +10,21 @@ namespace DataAccess.UOW
     public class UnitOfWork : IUnitOfWork
     {
         private readonly TestsContext _context;
-        public UnitOfWork(TestsContext context,
-            AnswerRepository answer,
-            LoginUserRepository login,
-            QuestionRepository question,
-            TestRepository test,
-            UserRepository user,
-            UserTestRepository userTest)
+        private static UnitOfWork _instance;
+        private UnitOfWork()
         {
-            _context = context;
-            Answers = answer;
-            Logins = login;
-            Questions = question;
-            Tests = test;
-            Users = user;
-            UsersTests = UsersTests;
+            _context = TestsContext.GetContext();
+            Answers = new AnswerRepository(_context);
+            Logins = new LoginUserRepository(_context);
+            Questions = new QuestionRepository(_context);
+            Tests = new TestRepository(_context);
+            Users = new UserRepository(_context);
+            UsersTests = new UserTestRepository(_context);
+        }
+        public static UnitOfWork getInstance() {
+            if (_instance == null)
+                _instance = new UnitOfWork();
+            return _instance;
         }
         public AnswerRepository Answers { get; }
 
