@@ -35,9 +35,11 @@ namespace TestPlatformProject.Pages
             ChangesAnswerScrollPanel.Children.Add(new TextBox() {  Margin = new Thickness(40, 10, 40, 0) });
             ChangesAnswerScrollPanel.Children.Add(new TextBlock() { FontSize = 15, FontStyle = FontStyles.Italic, Foreground = new SolidColorBrush(Color.FromRgb(255, 69, 0)), Margin = new Thickness(40, 30, 40, 0), Text = "Введите URL фото если оно надо:" });
             ChangesAnswerScrollPanel.Children.Add(new TextBox() {  Margin = new Thickness(40, 10, 40, 0) });
+            ChangesAnswerScrollPanel.Children.Add(new TextBlock() { FontSize = 15, FontStyle = FontStyles.Italic, Foreground = new SolidColorBrush(Color.FromRgb(255, 69, 0)), Margin = new Thickness(40, 30, 40, 0), Text = "Вариант ответа:" });
             ChangesAnswerScrollPanel.Children.Add(new StackPanel() { Orientation = Orientation.Horizontal });
             ((StackPanel)ChangesAnswerScrollPanel.Children[ChangesAnswerScrollPanel.Children.Count - 1]).Children.Add(new TextBox() { Width = 200, Height = 17, Margin = new Thickness(40, 10, 20, 0) });
             ((StackPanel)ChangesAnswerScrollPanel.Children[ChangesAnswerScrollPanel.Children.Count - 1]).Children.Add(new CheckBox() { Margin = new Thickness(15, 12, 0, 0) });
+     
 
         }
 
