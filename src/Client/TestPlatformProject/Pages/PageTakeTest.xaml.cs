@@ -1,5 +1,4 @@
-﻿using DataAccess.Models;
-using ServiceReference1;
+﻿using ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,57 +21,61 @@ namespace TestPlatformProject.Pages
     /// </summary>
     public partial class PageTakeTest : Page
     {
-        Test test = new Test();
+        Test test;
 
         private readonly Service1Client _service1Client;
         public PageTakeTest(Service1Client service1Client)
         {
             InitializeComponent();
-
+            test = new Test();
             _service1Client = service1Client;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            //////// тестировал  test переопределил в а и б но в foreach используется test
-            var a = test.Questions.ToList();
-            a.Add(new Question());
-            var b = a[0].Answers.ToList();
-            for(int i = 0; i < 4; i++)
+            test.Questions.ToList().Add(new Question());
+            test.Questions.ToList()[0].Answers.ToList().Add(new Answer());
+            test.Questions.ToList()[0].Answers.ToList().Add(new Answer());
+            test.Questions.ToList()[0].Answers.ToList().Add(new Answer());
+            for (int i = 0; i < test.Questions.ToList()[0].Answers.Count(); i++)
             {
-
-                a.Add(new Question() { Text = "Some question", ImageURL = "",});
-                b.Add(new Answer() { Text = "1" });
-                b.Add(new Answer() { Text = "1" });
-                b.Add(new Answer() { Text = "1" });
-
-                //test.Questions.ToList().Add(new Question() { Text = "Some question", ImageURL = "", });
-                //(test.Questions.ToList()[0]).Answers.ToList().Add(new Answer() { Text = "1" });
-                //(test.Questions.ToList()[0]).Answers.ToList().Add(new Answer() { Text = "1" });
-                //(test.Questions.ToList()[0]).Answers.ToList().Add(new Answer() { Text = "1" });
+                test.Questions.ToList()[0].Answers.ToList()[0].Text = "1";
             }
+            test.Questions.ToList()[0].Text = "Some";
+            foreach (Question question in test.Questions)
+            {
+                List<Question> ListQuestion = new List<Question>();
+                List<Answer> ListAnswer = new List<Answer>();
+                ListQuestion.Add(new Question() { Text = question.Text });
+                foreach(Answer answer in question.Answers)
+                {
+                    ListAnswer.Add(answer);
+                }
+
 
                 StackPanel stackPanel = new StackPanel();
+                stackPanel.Margin = new Thickness(10);
                 stackPanel.Children.Add(new Image());
                 stackPanel.Children.Add(new TextBlock());
-                ((Image)stackPanel.Children[0]).Source = (ImageSource)new ImageSourceConverter().ConvertFrom(a[0].ImageURL);
-            ((TextBlock)stackPanel.Children[1]).Text = a[0].Text;
-                for (int i = 0; i < b.Count; i++)
+
+                ((TextBlock)stackPanel.Children[1]).Text = ListQuestion[0].Text;
+                for (int i = 0; i < ListAnswer.Count; i++)
                 {
-                    stackPanel.Children.Add(new CheckBox() { Content = b[i].Text });
+                    stackPanel.Children.Add(new CheckBox() { Content = ListAnswer[i].Text });
                 }
-                if (a[0].ImageURL == "") stackPanel.Children[0].Visibility = Visibility.Hidden;
+                if (ListQuestion[0].ImageURL != null)
+                {
+                    ((Image)stackPanel.Children[0]).Source = (ImageSource)new ImageSourceConverter().ConvertFrom(ListQuestion[0].ImageURL);
+                }
+                else
+                    stackPanel.Children[0].Visibility = Visibility.Hidden;
                 StackPanel_Test.Children.Add(stackPanel);
-
-
-
-            ////////////
+            }
 
 
 
 
 
-            // код надо протестить должен работать
             //foreach (Question question in test.Questions)
             //{
             //    StackPanel stackPanel = new StackPanel();
