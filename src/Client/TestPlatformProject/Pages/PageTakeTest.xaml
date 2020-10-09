@@ -15,8 +15,8 @@
         <Grid Margin="10" Background="LightYellow">
             <TextBlock Name="TextBlock_NameTest" HorizontalAlignment="Center" Margin="10" FontStyle="Italic" Foreground="OrangeRed">Name Test</TextBlock>
             <ScrollViewer>
-                <StackPanel>
-                    <StackPanel Margin="10,30,10,10" Name="StackPanel_Text">
+                <StackPanel Name="StackPanel_Test">
+                    <StackPanel Margin="10,30,10,10">
                         <Image Source="https://www.biletik.aero/upload/resize_cache/medialibrary/807/compressed/807f262b60da392f1e09aa6d33f20a9b.jpg"></Image>
                         <TextBlock Foreground="OrangeRed">Вопрос</TextBlock>
                         <CheckBox Foreground="OrangeRed">1</CheckBox>
