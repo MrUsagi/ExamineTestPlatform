@@ -9,56 +9,18 @@
 
 namespace ServiceReference1
 {
-    using System.Runtime.Serialization;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/TestPlatformServices")]
-    public partial class CompositeType : object
-    {
-        
-        private bool BoolValueField;
-        
-        private string StringValueField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue
-        {
-            get
-            {
-                return this.BoolValueField;
-            }
-            set
-            {
-                this.BoolValueField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue
-        {
-            get
-            {
-                return this.StringValueField;
-            }
-            set
-            {
-                this.StringValueField = value;
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1
     {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/IsLogin", ReplyAction="http://tempuri.org/IService1/IsLoginResponse")]
+        System.Threading.Tasks.Task<bool> IsLoginAsync(string password, string login);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<ServiceReference1.CompositeType> GetDataUsingDataContractAsync(ServiceReference1.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Registration", ReplyAction="http://tempuri.org/IService1/RegistrationResponse")]
+        System.Threading.Tasks.Task<bool> RegistrationAsync(string password, string login, string fio, string email);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -111,14 +73,14 @@ namespace ServiceReference1
         {
         }
         
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value)
+        public System.Threading.Tasks.Task<bool> IsLoginAsync(string password, string login)
         {
-            return base.Channel.GetDataAsync(value);
+            return base.Channel.IsLoginAsync(password, login);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference1.CompositeType> GetDataUsingDataContractAsync(ServiceReference1.CompositeType composite)
+        public System.Threading.Tasks.Task<bool> RegistrationAsync(string password, string login, string fio, string email)
         {
-            return base.Channel.GetDataUsingDataContractAsync(composite);
+            return base.Channel.RegistrationAsync(password, login, fio, email);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

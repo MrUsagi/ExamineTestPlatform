@@ -21,7 +21,7 @@ namespace DataAccess.UOW
             Users = new UserRepository(_context);
             UsersTests = new UserTestRepository(_context);
         }
-        public static UnitOfWork getInstance() {
+        public static UnitOfWork GetInstance() {
             if (_instance == null)
                 _instance = new UnitOfWork();
             return _instance;

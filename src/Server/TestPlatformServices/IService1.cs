@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace TestPlatformServices
 {
@@ -14,36 +15,33 @@ namespace TestPlatformServices
     {
 
         [OperationContract]
-        string GetData(int value);
-
+        Task<bool> IsLogin(string password, string login);
         [OperationContract]
-        bool IsLogin(string password, string login);
-        bool Registration(string password, string login, string fio, string email);
-        bool Connect();
+        Task<bool> Registration(string password, string login, string fio, string email);
 
         // TODO: Добавьте здесь операции служб
     }
 
 
-    // Используйте контракт данных, как показано в примере ниже, чтобы добавить составные типы к операциям служб.
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
+    //// Используйте контракт данных, как показано в примере ниже, чтобы добавить составные типы к операциям служб.
+    //[DataContract]
+    //public class CompositeType
+    //{
+    //    bool boolValue = true;
+    //    string stringValue = "Hello ";
 
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
+    //    [DataMember]
+    //    public bool BoolValue
+    //    {
+    //        get { return boolValue; }
+    //        set { boolValue = value; }
+    //    }
 
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
-    }
+    //    [DataMember]
+    //    public string StringValue
+    //    {
+    //        get { return stringValue; }
+    //        set { stringValue = value; }
+    //    }
+    //}
 }
