@@ -31,7 +31,7 @@ namespace TestPlatformProject.Pages
         {
             if (await _service1Client.IsLoginAsync(LoginTextBoxInLogin.Text, PassTextBoxInLogin.Text))
             {
-                if(await _service1Client.IsAdminAsync(LoginTextBoxInLogin.Text, PassTextBoxInLogin.Text))
+                if(await _service1Client.IsAdminAsync(LoginTextBoxInLogin.Text))
                     this.NavigationService.Navigate(new AdminPage(_service1Client));
                 else this.NavigationService.Navigate(new UserPage(_service1Client));
             }
