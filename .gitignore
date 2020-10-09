@@ -69,3 +69,14 @@ src/Client/BusinessLogic/obj/Debug/netstandard2.0/BusinessLogic.dll
 src/Client/BusinessLogic/obj/Debug/netstandard2.0/BusinessLogic.pdb
 src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/TestPlatformProject_MarkupCompile.i.cache
 src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/TestPlatformProject_MarkupCompile.i.cache
+src/.vs/TestPlatformProject/DesignTimeBuild/.dtbcache
+src/.vs/TestPlatformProject/v16/Server/sqlite3/db.lock
+src/.vs/TestPlatformProject/v16/Server/sqlite3/storage.ide
+src/Client/BusinessLogic/obj/Debug/netstandard2.0/BusinessLogic.AssemblyInfo.cs
+src/Client/BusinessLogic/obj/Debug/netstandard2.0/BusinessLogic.csprojAssemblyReference.cache
+src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/App.g.i.cs
+src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/MainWindow.g.i.cs
+src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/TestPlatformProject.AssemblyInfo.cs
+src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/TestPlatformProject.csprojAssemblyReference.cache
+src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/TestPlatformProject.designer.runtimeconfig.json
+src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/TestPlatformProject_MarkupCompile.i.cache
