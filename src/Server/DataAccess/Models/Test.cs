@@ -17,6 +17,7 @@ namespace DataAccess.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public int TryNumber { get; set; }
+        public bool IsRemove { get; set; }
         public IEnumerable<UserTest> Users { get; set; }
         public IEnumerable<Question> Questions { get; set; } 
     }

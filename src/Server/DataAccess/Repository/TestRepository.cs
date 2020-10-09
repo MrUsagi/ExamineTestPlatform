@@ -18,6 +18,7 @@ namespace DataAccess.Repository
             return await this.Entities
                 .Include(q => q.Questions)
                 .Include(x=>x.Users)
+                .Where(x => !x.IsRemove)
                 .ToListAsync()
                 .ConfigureAwait(false);
         }
@@ -28,6 +29,7 @@ namespace DataAccess.Repository
                 .Include(q => q.Questions)
                 .Include(x=>x.Users)
                 .Where(predicat)
+                .Where(x => !x.IsRemove)
                 .ToListAsync()
                 .ConfigureAwait(false);
         }
