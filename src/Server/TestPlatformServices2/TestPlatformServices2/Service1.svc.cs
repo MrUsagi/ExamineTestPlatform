@@ -1,4 +1,4 @@
-﻿using DataAccess.ModelsUI;
+﻿using DataAccess.Models;
 using DataAccess.UOW;
 using System;
 using System.Collections.Generic;
@@ -51,15 +51,18 @@ namespace TestPlatformServices2
 
         public async Task<bool> RemoveQuestion(int qestionId)
         {
-            // (await unitOfWork.Questions.FindByConditionAsync(x=>x.Id == qestionId))
-            //TODO Add remove request to DB;
-            return false;
+            (await unitOfWork.Questions.FindByConditionAsync(x => x.Id == qestionId)).First().IsRemove = true;
+
+            await unitOfWork.SaveAsync();
+            return true;
         }
 
         public async Task<bool> RemoveTest(int testId)
         {
-            //TODO Add remove request to DB;
-            return false;
+            (await unitOfWork.Tests.FindByConditionAsync(x => x.Id == testId)).First().IsRemove = true;
+
+            await unitOfWork.SaveAsync();
+            return true;
         }
 
 
@@ -85,9 +88,9 @@ namespace TestPlatformServices2
         {
             if ((await unitOfWork.Logins.FindByConditionAsync(x => x.Login == login)).Any()) return false;
 
-            await unitOfWork.Logins.CreateAsync(new DataAccess.ModelsUI.LoginUser() { Password = password, Login = login });
+            await unitOfWork.Logins.CreateAsync(new LoginUser() { Password = password, Login = login });
             await unitOfWork.SaveAsync();
-            await unitOfWork.Users.CreateAsync(new DataAccess.ModelsUI.User()
+            await unitOfWork.Users.CreateAsync(new User()
             {
                 LoginId = (await unitOfWork.Logins.FindByConditionAsync(x => x.Login == login)).First().Id,
                 Email = email,
@@ -95,6 +98,14 @@ namespace TestPlatformServices2
                 IsAdmin = false
             });
             await unitOfWork.SaveAsync();
+            return true;
+        }
+
+        public async Task<bool> AddResoultTest(int idTest, int idUser, int result)
+        {
+            await unitOfWork.UsersTests.CreateAsync(new UserTest() { Result = result, TestId = idTest, UserId = idUser });
+            await unitOfWork.SaveAsync();
+
             return true;
         }
     }

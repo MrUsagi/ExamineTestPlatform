@@ -1,6 +1,7 @@
 ﻿using ServiceReference1;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,6 +26,19 @@ namespace TestPlatformProject.Pages
             InitializeComponent();
 
             _service1Client = service1Client;
+        }
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            var lisr =  (await _service1Client.GetTestsAsync()).ToList();
+
+            TestListView.Items.Clear();
+            TestListView.ItemsSource = lisr;
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new LoginPage(_service1Client));
         }
     }
 }

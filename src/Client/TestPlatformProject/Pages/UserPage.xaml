@@ -22,9 +22,9 @@
             </Grid.RowDefinitions>
             <TextBlock Margin="10" Foreground="OrangeRed" HorizontalAlignment="Center">Список тестов</TextBlock>
             <ScrollViewer Margin="10,30,10,10" Grid.RowSpan="2">
-                <ListBox  Name="DataGridTests" Background="LightGray">
+                <ListView  Name="TestListView" Background="LightGray">
 
-                </ListBox>
+                </ListView>
             </ScrollViewer>
             <TextBlock Grid.Column="2" Margin="10" FontSize="40" HorizontalAlignment="Center" Foreground="OrangeRed">Описание</TextBlock>
             <TextBlock Grid.Column="2" Margin="70" Foreground="OrangeRed" TextWrapping="Wrap">Описание Теста</TextBlock>
