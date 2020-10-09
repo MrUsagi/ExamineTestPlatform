@@ -32,11 +32,14 @@ namespace TestPlatformProject.Pages
             this.NavigationService.Navigate(new AddAdminPage(_service1Client));
         }
 
-        private void DeleteTestButton_Click(object sender, RoutedEventArgs e)
+        private async void DeleteTestButton_Click(object sender, RoutedEventArgs e)
         {
             if(TestsLIstView.SelectedItem != null)
             {
                 TestsLIstView.Items.RemoveAt(TestsLIstView.SelectedIndex);
+
+
+                //await _service1Client.RemoveTestAsync();
                 //TODO add request to service 
             }
         }

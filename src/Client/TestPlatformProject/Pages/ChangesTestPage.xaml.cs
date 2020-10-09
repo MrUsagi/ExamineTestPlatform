@@ -31,15 +31,15 @@ namespace TestPlatformProject.Pages
         private void clickLastButton(object sender, RoutedEventArgs e)
         {
 
-            AddAnswerButton.Click -= clickLastButton;
-           
+           // AddAnswerButton.Click -= clickLastButton;
+
             ChangesAnswerScrollPanel.Children.Add(new TextBlock() { FontSize = 15, FontStyle = FontStyles.Italic, Foreground = new SolidColorBrush(Color.FromRgb(255, 69, 0)), Margin = new Thickness(40, 30, 40, 0), Text = "Вариант ответа:" });
-          
+
             ChangesAnswerScrollPanel.Children.Add(new StackPanel() { Orientation = Orientation.Horizontal });
-            ((StackPanel)ChangesAnswerScrollPanel.Children[3]).Children.Add(new TextBox() { Width =200, Height=17, Margin = new Thickness(40, 10, 20, 0) });
-            ((StackPanel)ChangesAnswerScrollPanel.Children[3]).Children.Add(new CheckBox() {  Margin = new Thickness(15, 12, 0, 0) });
-            ChangesAnswerScrollPanel.Children.Add(new Button() { Width = 200, Margin = new Thickness(0, 15, 0, 0), Content = "_Добавить ответ", Background = new SolidColorBrush(Color.FromRgb(255, 69, 0)), Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255)), });
-            AddAnswerButton.Click += clickLastButton;
+            ((StackPanel)ChangesAnswerScrollPanel.Children[ChangesAnswerScrollPanel.Children.Count - 1]).Children.Add(new TextBox() { Width = 200, Height = 17, Margin = new Thickness(40, 10, 20, 0) });
+            ((StackPanel)ChangesAnswerScrollPanel.Children[ChangesAnswerScrollPanel.Children.Count - 1]).Children.Add(new CheckBox() { Margin = new Thickness(15, 12, 0, 0) });
+            // ChangesAnswerScrollPanel.Children.Add(new Button() { Width = 200, Margin = new Thickness(0, 15, 0, 0), Content = "_Добавить ответ", Background = new SolidColorBrush(Color.FromRgb(255, 69, 0)), Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255)), });
+            // AddAnswerButton.Click += clickLastButton;
         }
     }
 }

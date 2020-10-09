@@ -1,5 +1,4 @@
-﻿using DataAccess.Models;
-using ServiceReference1;
+﻿using ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
