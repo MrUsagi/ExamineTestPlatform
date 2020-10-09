@@ -7,13 +7,3 @@ src/Client/TestPlatformProject/obj
 src/Client/TestPlatformProject/bin
 src/Server/DataAccess/obj
 src/Server/DataAccess/bin
-src/Client/.vs/TestPlatformProject/DesignTimeBuild/.dtbcache
-src/Client/.vs/TestPlatformProject/v16/.suo
-src/Client/.vs/TestPlatformProject/v16/Server/sqlite3/db.lock
-src/Client/.vs/TestPlatformProject/v16/Server/sqlite3/storage.ide
-src/Server/TestPlatformServices/.vs/TestPlatformServices/v16/Server/sqlite3/storage.ide-wal
-src/Server/TestPlatformServices/.vs/TestPlatformServices/v16/Server/sqlite3/storage.ide-shm
-src/Server/TestPlatformServices/.vs/TestPlatformServices/v16/Server/sqlite3/storage.ide
-src/Server/TestPlatformServices/.vs/TestPlatformServices/v16/Server/sqlite3/db.lock
-src/Server/TestPlatformServices/.vs/TestPlatformServices/v16/.suo
-src/Server/TestPlatformServices/.vs/TestPlatformServices/config/applicationhost.config
