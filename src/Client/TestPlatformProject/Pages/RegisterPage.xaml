@@ -31,9 +31,8 @@
 
 
             </Grid.RowDefinitions>
-            
-            <Image Grid.Column="0" Grid.ColumnSpan="3" Margin="0,70,0,0" Source="https://v-mire.net/wp-content/uploads/2017/05/neural-network-07.jpg"></Image>
-            <Image Source="/Images/logo.png" Grid.Column="1" Grid.ColumnSpan="2" Margin="230,5,0,20" ></Image>
+
+            <Image Source="/Images/logo.png" Grid.Column="1" Margin="0,50,0,0" ></Image>
             <TextBlock Grid.Row="0" Grid.Column="1" FontSize="50" HorizontalAlignment="Center" FontStyle="Italic" Foreground="OrangeRed" >Registration</TextBlock>
 
             <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom">Login:</TextBlock>

@@ -6,5 +6,5 @@
         xmlns:local="clr-namespace:TestPlatformProject"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <!--<Frame Source="LoginPage.xaml"></Frame>-->
+        <Frame Source="LoginPage.xaml"></Frame>
 </Window>
