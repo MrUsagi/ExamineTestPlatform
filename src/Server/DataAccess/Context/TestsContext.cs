@@ -13,12 +13,12 @@ namespace DataAccess.Context
         private static TestsContext _instance;
         private TestsContext()
         {
-            //TestsInitializer.Initialize(this);
-        }
-        public TestsContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
-        {
             TestsInitializer.Initialize(this);
         }
+        //public TestsContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
+        //{
+        //    TestsInitializer.Initialize(this);
+        //}
         public static TestsContext GetContext()
         {
             if (_instance == null)

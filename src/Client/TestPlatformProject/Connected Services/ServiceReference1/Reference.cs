@@ -111,7 +111,7 @@ namespace ServiceReference1
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IService1))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost:54852/Service1.svc");
+                return new System.ServiceModel.EndpointAddress("http://localhost:56635/Service1.svc");
             }
             throw new System.InvalidOperationException(string.Format("Не удалось найти конечную точку с именем \"{0}\".", endpointConfiguration));
         }

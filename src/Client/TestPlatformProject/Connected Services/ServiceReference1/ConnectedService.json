@@ -6,7 +6,7 @@
   },
   "ExtendedData": {
     "inputs": [
-      "http://localhost:54852/Service1.svc?singleWsdl"
+      "http://localhost:56635/Service1.svc?singleWsdl"
     ],
     "collectionTypes": [
       "System.Array",
