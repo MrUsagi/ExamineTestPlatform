@@ -23,3 +23,17 @@ src/Server/SeverApp/obj/Debug/netcoreapp3.1/SeverApp.csprojAssemblyReference.cac
 src/Server/SeverApp/obj/project.assets.json
 src/Server/SeverApp/obj/project.nuget.cache
 src/Server/SeverApp/obj/SeverApp.csproj.nuget.dgspec.json
+src/.vs/TestPlatformProject/v16/Server/sqlite3/db.lock
+src/.vs/TestPlatformProject/v16/Server/sqlite3/storage.ide
+src/.vs/TestPlatformProject/v16/Server/sqlite3/storage.ide-shm
+src/.vs/TestPlatformProject/v16/Server/sqlite3/storage.ide-wal
+src/Client/BusinessLogic/obj/Debug/netstandard2.0/BusinessLogic.csprojAssemblyReference.cache
+src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/App.g.i.cs
+src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/MainWindow.g.i.cs
+src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/TestPlatformProject.csprojAssemblyReference.cache
+src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/TestPlatformProject_MarkupCompile.i.cache
+src/Client/BusinessLogic/obj/Debug/netstandard2.0/BusinessLogic.csprojAssemblyReference.cache
+src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/App.g.i.cs
+src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/MainWindow.g.i.cs
+src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/TestPlatformProject.csprojAssemblyReference.cache
+src/Client/TestPlatformProject/obj/Debug/netcoreapp3.1/TestPlatformProject_MarkupCompile.i.cache
