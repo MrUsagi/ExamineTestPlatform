@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <Folder Include="Context\Initializers\" />
+    <Folder Include="UOW\" />
   </ItemGroup>
 
   <ItemGroup>
