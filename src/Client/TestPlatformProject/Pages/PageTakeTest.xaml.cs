@@ -34,24 +34,22 @@ namespace TestPlatformProject.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var listtmp = test.Questions.ToList();
-            listtmp.Add(new QuestionUI());
-            listtmp[0].Answers.ToList().Add(new AnswerUI());
-            listtmp[0].Answers.ToList().Add(new AnswerUI());
-            listtmp[0].Answers.ToList().Add(new AnswerUI());
-            for (int i = 0; i < test.Questions.ToList()[0].Answers.Count(); i++)
-            {
-                test.Questions.ToList()[0].Answers.ToList()[0].Text = "1";
-            }
-            test.Questions.ToList()[0].Text = "Some";
+
+            //var listtmp = test.Questions.ToList();
+            //listtmp.Add(new QuestionUI());
+            //var listtmpanswer = listtmp[0].Answers.ToList();
+            //listtmp[0].Text = "Some";
+            //listtmpanswer.Add(new AnswerUI() { Text = "1" });
+            //listtmpanswer.Add(new AnswerUI() { Text = "2" });
+            //listtmpanswer.Add(new AnswerUI() { Text = "3" });
             foreach (QuestionUI question in test.Questions)
             {
                 List<QuestionUI> ListQuestion = new List<QuestionUI>();
                 List<AnswerUI> ListAnswer = new List<AnswerUI>();
                 ListQuestion.Add(new QuestionUI() { Text = question.Text });
-                foreach(AnswerUI answer in question.Answers)
+                for (int i = 0; i < question.Answers.Count(); i++)
                 {
-                    ListAnswer.Add(answer);
+                    ListAnswer.Add(question.Answers.ToList()[i]);
                 }
 
 
@@ -92,6 +90,24 @@ namespace TestPlatformProject.Pages
             //   if (question.ImageURL == "") stackPanel.Children[0].Visibility = Visibility.Hidden;
             //    StackPanel_Test.Children.Add(stackPanel);
             //}
+        }
+
+        private void Button_Send(object sender, RoutedEventArgs e)
+        {
+            int balls = 0;
+            for (int i = 0; i < StackPanel_Test.Children.Count; i++)
+            {
+                foreach (AnswerUI answerUI in test.Questions.ToList()[i].Answers.ToList())
+                {
+                    for (int j = 2; j < 5; j++)
+                    {
+                        if (((CheckBox)((StackPanel)StackPanel_Test.Children[i]).Children[j]).IsChecked == true)
+                        {
+                            if (((CheckBox)((StackPanel)StackPanel_Test.Children[i]).Children[j]).Content == answerUI.Text) balls++;
+                        }
+                    }
+                }
+            }
         }
     }
 }
