@@ -8,13 +8,17 @@ using System.Text;
 
 namespace DataAccess.Context
 {
-    public class TestsContext:DbContext
+    public class TestsContext : DbContext
     {
         private static TestsContext _instance;
         private TestsContext()
         {
             TestsInitializer.Initialize(this);
         }
+        //public TestsContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
+        //{
+        //    TestsInitializer.Initialize(this);
+        //}
         public static TestsContext GetContext()
         {
             if (_instance == null)
@@ -57,11 +61,10 @@ namespace DataAccess.Context
                 .HasForeignKey(x => x.QuestionId);
             modelBuilder.Entity<LoginUser>()
                 .HasOne(x => x.User)
-                .WithOne(x => x.Login);
+                .WithOne(x => x.Login).HasForeignKey<LoginUser>(x => x.UserId);
             modelBuilder.Entity<Question>()
                 .HasOne(x => x.Test)
-                .WithMany(x => x.Questions)
-                .HasForeignKey(x => x.Test);
+                .WithMany(x => x.Questions);
             modelBuilder.Entity<Question>()
                 .HasMany(x => x.Answers)
                 .WithOne(x => x.Question);
@@ -76,7 +79,7 @@ namespace DataAccess.Context
                 .WithOne(x => x.User);
             modelBuilder.Entity<User>()
                 .HasOne(x => x.Login)
-                .WithOne(x => x.User);
+                .WithOne(x => x.User).HasForeignKey<User>(x => x.LoginId);
             modelBuilder.Entity<UserTest>()
                 .HasOne(x => x.User)
                 .WithMany(x => x.Tests)

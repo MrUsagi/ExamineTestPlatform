@@ -26,10 +26,11 @@ namespace TestPlatformProject
         {
             InitializeComponent();
 
-            MessageBox.Show(service1Client.GetDataAsync(3).Result);
+            //MessageBox.Show(service1Client.GetDataAsync(3).Result);
+            var s = service1Client.IsLoginAsync("asd", "asdasd").Result;
         }
 
-        
+
 
     }
 }

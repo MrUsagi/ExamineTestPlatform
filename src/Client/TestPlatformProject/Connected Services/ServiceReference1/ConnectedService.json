@@ -6,7 +6,7 @@
   },
   "ExtendedData": {
     "inputs": [
-      "http://localhost:54852/Service1.svc?singleWsdl"
+      "http://localhost:56635/Service1.svc?singleWsdl"
     ],
     "collectionTypes": [
       "System.Array",
@@ -14,6 +14,14 @@
     ],
     "namespaceMappings": [
       "*, ServiceReference1"
+    ],
+    "references": [
+      "System.ServiceModel, {System.ServiceModel.Primitives, 4.4.4}",
+      "System.ServiceModel.Duplex, {System.ServiceModel.Duplex, 4.4.4}",
+      "System.ServiceModel.Http, {System.ServiceModel.Http, 4.4.4}",
+      "System.ServiceModel.NetTcp, {System.ServiceModel.NetTcp, 4.4.4}",
+      "System.ServiceModel.Primitives, {System.ServiceModel.Primitives, 4.4.4}",
+      "System.ServiceModel.Security, {System.ServiceModel.Security, 4.4.4}"
     ],
     "targetFramework": "netcoreapp3.1",
     "typeReuseMode": "All"

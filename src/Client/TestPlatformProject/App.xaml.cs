@@ -13,5 +13,7 @@ namespace TestPlatformProject
     /// </summary>
     public partial class App : Application
     {
+
+
     }
 }
