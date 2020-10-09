@@ -1,0 +1,39 @@
+﻿<Page x:Class="TestPlatformProject.Pages.PageTakeTest"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestPlatformProject.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="450"
+      Title="PageTakeTest"
+      Loaded="Page_Loaded">
+
+    <Grid Background="LightGray">
+
+
+        <Grid Margin="10" Background="LightYellow">
+            <TextBlock Name="TextBlock_NameTest" HorizontalAlignment="Center" Margin="10" FontStyle="Italic" Foreground="OrangeRed">Name Test</TextBlock>
+            <ScrollViewer>
+                <StackPanel>
+                    <StackPanel Margin="10,30,10,10" Name="StackPanel_Text">
+                        <Image Source="https://www.biletik.aero/upload/resize_cache/medialibrary/807/compressed/807f262b60da392f1e09aa6d33f20a9b.jpg"></Image>
+                        <TextBlock Foreground="OrangeRed">Вопрос</TextBlock>
+                        <CheckBox Foreground="OrangeRed">1</CheckBox>
+                        <CheckBox Foreground="OrangeRed">2</CheckBox>
+                        <CheckBox Foreground="OrangeRed">3</CheckBox>
+                    </StackPanel>
+                    <Button HorizontalAlignment="Right" Margin="10" FontSize="15" Foreground="White" Background="OrangeRed">Отправить</Button>
+                </StackPanel>
+            </ScrollViewer>
+            
+            
+            
+            
+            
+            
+
+
+        </Grid>
+    </Grid>
+</Page>
