@@ -10,23 +10,21 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Repository
 {
-    public class UserRepository:BaseRepository<User>
+    public class AnswerRepository:BaseRepository<Answer>
     {
-        public UserRepository(TestsContext context) : base(context) { }
-        public override async Task<IReadOnlyCollection<User>> GetAllAsync()
+        public AnswerRepository(TestsContext context) : base(context) { }
+        public override async Task<IReadOnlyCollection<Answer>> GetAllAsync()
         {
             return await this.Entities
-                .Include(u => u.Login)
-                .Include(x => x.Tests)
+                .Include(q => q.Question)
                 .ToListAsync()
                 .ConfigureAwait(false);
         }
 
-        public override async Task<IReadOnlyCollection<User>> FindByConditionAsync(Expression<Func<User, bool>> predicat)
+        public override async Task<IReadOnlyCollection<Answer>> FindByConditionAsync(Expression<Func<Answer, bool>> predicat)
         {
             return await this.Entities
-                .Include(u => u.Tests)
-                .Include(x => x.Login)
+                .Include(q => q.Question)
                 .Where(predicat)
                 .ToListAsync()
                 .ConfigureAwait(false);
