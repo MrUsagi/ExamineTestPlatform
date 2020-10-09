@@ -10,9 +10,16 @@ namespace DataAccess.Context
 {
     public class TestsContext:DbContext
     {
-        public TestsContext()
+        private static TestsContext _instance;
+        private TestsContext()
         {
             TestsInitializer.Initialize(this);
+        }
+        public static TestsContext GetContext()
+        {
+            if (_instance == null)
+                _instance = new TestsContext();
+            return _instance;
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
