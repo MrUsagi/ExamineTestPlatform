@@ -28,28 +28,20 @@
                 <RowDefinition Height="0.2*"></RowDefinition>
                 <RowDefinition Height="0.3*"></RowDefinition>
                 <RowDefinition Height="0.5*"></RowDefinition>
-
-
             </Grid.RowDefinitions>
-
             <Image Source="/Images/logo.png" Grid.Column="1" Margin="0,50,0,0" ></Image>
             <TextBlock Grid.Row="0" Grid.Column="1" FontSize="50" HorizontalAlignment="Center" FontStyle="Italic" Foreground="OrangeRed" >Registration</TextBlock>
-
-            <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom">Login:</TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom">Password:</TextBlock>
-            <TextBlock Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom">Name:</TextBlock>
-            <TextBlock Grid.Row="7" Grid.Column="1" VerticalAlignment="Bottom">Surname:</TextBlock>
-            <TextBlock Grid.Row="9" Grid.Column="1" VerticalAlignment="Bottom">E-mail:</TextBlock>
-
+            <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" FontStyle="Italic" Foreground="OrangeRed">Login:</TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" FontStyle="Italic" Foreground="OrangeRed">Password:</TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" FontStyle="Italic" Foreground="OrangeRed">Name:</TextBlock>
+            <TextBlock Grid.Row="7" Grid.Column="1" VerticalAlignment="Bottom" FontStyle="Italic" Foreground="OrangeRed">Surname:</TextBlock>
+            <TextBlock Grid.Row="9" Grid.Column="1" VerticalAlignment="Bottom" FontStyle="Italic" Foreground="OrangeRed">E-mail:</TextBlock>
             <TextBox x:Name="LoginTextBoxInRegister" Grid.Row="2" Grid.Column="1" Margin="0,5"></TextBox>
             <TextBox x:Name="PassTextBoxInRegister" Grid.Row="4" Grid.Column="1" Margin="0,5"></TextBox>
             <TextBox x:Name="NameTextBoxInRegister" Grid.Row="6" Grid.Column="1" Margin="0,5"></TextBox>
             <TextBox x:Name="SurnameTextBoxInRegister" Grid.Row="8" Grid.Column="1" Margin="0,5"></TextBox>
             <TextBox x:Name="EmailTextBoxInRegister" Grid.Row="10" Grid.Column="1" Margin="0,5"></TextBox>
-
             <Button x:Name="loginButtonInRegister" Grid.Column="1" Grid.Row="11" Margin="10" Background="OrangeRed" Foreground="AliceBlue" Click="loginButtonInRegister_Click">ВОЙТИ</Button>
-
-
         </Grid>
     </Grid>
 </Page>

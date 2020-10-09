@@ -22,11 +22,8 @@
                 <RowDefinition Height="0.3*"></RowDefinition>
                 <RowDefinition Height="0.5*"></RowDefinition>
                 <RowDefinition Height="0.5*"></RowDefinition>
-
             </Grid.RowDefinitions>
-          
             <Image Source="/Images/logo.png" Grid.Column="1" Margin="0,40,0,0" ></Image>
-
             <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="23" FontSize="40" HorizontalAlignment="Center" FontStyle="Italic" Foreground="OrangeRed" >LogInTestPlanform</TextBlock>
             <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Bottom" FontStyle="Italic" Foreground="OrangeRed" >Login:</TextBlock>
             <TextBlock Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" FontStyle="Italic" Foreground="OrangeRed">Password:</TextBlock>
@@ -34,7 +31,6 @@
             <TextBox x:Name="PassTextBoxInLogin" Grid.Row="4" Grid.Column="1" Margin="0,15"></TextBox>
             <Button x:Name="loginButtonInLogin" Grid.Column="1" Grid.Row="5" Margin="20" Background="OrangeRed" Foreground="AliceBlue" Click="loginButtonInLogin_Click">ВОЙТИ</Button>
             <Button x:Name="registerButtonInLogin" Grid.Column="1" Grid.Row="6" Margin="20" Background="OrangeRed" Foreground="AliceBlue" Click="registerButtonInLogin_Click">РЕГИСТРАЦИЯ</Button>
-
         </Grid>
     </Grid>
 </Page>
