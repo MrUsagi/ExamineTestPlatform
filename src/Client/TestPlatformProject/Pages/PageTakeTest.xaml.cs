@@ -1,4 +1,5 @@
 ﻿using DataAccess.Models;
+using ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,18 +23,17 @@ namespace TestPlatformProject.Pages
     public partial class PageTakeTest : Page
     {
         Test test = new Test();
-        
-        
-        
-        public PageTakeTest()
+
+        private readonly Service1Client _service1Client;
+        public PageTakeTest(Service1Client service1Client)
         {
             InitializeComponent();
+
+            _service1Client = service1Client;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
-
             //////// тестировал  test переопределил в а и б но в foreach используется test
             var a = test.Questions.ToList();
             a.Add(new Question());
