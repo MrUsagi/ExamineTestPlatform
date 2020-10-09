@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Student\Desktop\MyFOSSA\ExamineTestPlatform\src\Client\TestPlatformProject\obj\Debug\netcoreapp3.1\
+C:\Users\student\Desktop\ExamineTestPlatform\src\Client\TestPlatformProject\obj\Debug\netcoreapp3.1\
 TestPlatformProject
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\Student\Desktop\MyFOSSA\ExamineTestPlatform\src\Client\TestPlatformProject\App.xaml
-11151548125
+C:\Users\student\Desktop\ExamineTestPlatform\src\Client\TestPlatformProject\App.xaml
+4-269955914
 
-51338696594
+8936412687
 1921654412462
-MainWindow.xaml;
+MainWindow.xaml;Pages\AdminPage.xaml;Pages\LoginPage.xaml;Pages\RegisterPage.xaml;
 
-False
+True
 

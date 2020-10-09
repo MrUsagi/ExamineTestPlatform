@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+LdbQg2xdUFsGb7zNZ3Dl0O/+d0SlmtJQdEibbJu5TAIwXZR4604iXLu9NVLrAM/ubCzBTs+capjGylAJXtmNg==",
+  "dgSpecHash": "ELOdYJuD51LFO26pfpUiptd7Vot8Is9D8JdXCq2v3w70HTSzMZohxCC5O9QvEDid9cAMQ+2/doQkoclw7qZBUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Student\\Desktop\\MyFOSSA\\ExamineTestPlatform\\src\\Server\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\student\\Desktop\\ExamineTestPlatform\\src\\Server\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
