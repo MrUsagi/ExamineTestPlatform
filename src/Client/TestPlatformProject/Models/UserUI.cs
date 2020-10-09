@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace DataAccess.Models
+namespace DataAccess.ModelsUI
 {
-    public class User
+    public class UserUI
     {
-        public User()
+        public UserUI()
         {
-            Tests = new List<UserTest>();
+            Tests = new List<UserTestUI>();
         }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -18,7 +18,7 @@ namespace DataAccess.Models
         public string Email { get; set; }
         public bool IsAdmin { get; set; }
         public int LoginId { get; set; }
-        public LoginUser Login { get; set; }
-        public IEnumerable<UserTest> Tests { get; set; }
+        public LoginUserUI Login { get; set; }
+        public IEnumerable<UserTestUI> Tests { get; set; }
     }
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace DataAccess.Models
+namespace DataAccess.ModelsUI
 {
-    public class LoginUser
+    public class AnswerUI
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public int UserId { get; set; }
-        public User User { get; set; }
+        public int QuestionId { get; set; }
+        public QuestionUI Question { get; set; }
+        public string Text { get; set; }
+        public bool IsCorrect { get; set; }
     }
 }

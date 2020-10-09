@@ -1,4 +1,4 @@
-﻿using DataAccess.Models;
+﻿using DataAccess.ModelsUI;
 using DataAccess.UOW;
 using System;
 using System.Collections.Generic;
@@ -85,9 +85,9 @@ namespace TestPlatformServices2
         {
             if ((await unitOfWork.Logins.FindByConditionAsync(x => x.Login == login)).Any()) return false;
 
-            await unitOfWork.Logins.CreateAsync(new DataAccess.Models.LoginUser() { Password = password, Login = login });
+            await unitOfWork.Logins.CreateAsync(new DataAccess.ModelsUI.LoginUser() { Password = password, Login = login });
             await unitOfWork.SaveAsync();
-            await unitOfWork.Users.CreateAsync(new DataAccess.Models.User()
+            await unitOfWork.Users.CreateAsync(new DataAccess.ModelsUI.User()
             {
                 LoginId = (await unitOfWork.Logins.FindByConditionAsync(x => x.Login == login)).First().Id,
                 Email = email,

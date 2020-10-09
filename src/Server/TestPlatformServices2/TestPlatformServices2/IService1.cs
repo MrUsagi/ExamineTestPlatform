@@ -1,4 +1,4 @@
-﻿using DataAccess.Models;
+﻿using DataAccess.ModelsUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;

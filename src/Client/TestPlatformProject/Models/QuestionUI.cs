@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace DataAccess.Models
+namespace DataAccess.ModelsUI
 {
-    public class Question
+    public class QuestionUI
     {
-        public Question()
+        public QuestionUI()
         {
-            Answers = new List<Answer>();
+            Answers = new List<AnswerUI>();
         }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -18,7 +18,7 @@ namespace DataAccess.Models
         public bool IsManyAnswers { get; set; }
         public int Weight { get; set; }
         public int TestId { get; set; }
-        public Test Test { get; set; }
-        public IEnumerable<Answer> Answers { get; set; }
+        public TestUI Test { get; set; }
+        public IEnumerable<AnswerUI> Answers { get; set; }
     }
 }

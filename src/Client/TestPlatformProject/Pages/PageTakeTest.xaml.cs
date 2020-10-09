@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media.TextFormatting;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DataAccess.ModelsUI;
 
 namespace TestPlatformProject.Pages
 {
@@ -21,33 +22,34 @@ namespace TestPlatformProject.Pages
     /// </summary>
     public partial class PageTakeTest : Page
     {
-        Test test;
+        TestUI test;
 
         private readonly Service1Client _service1Client;
         public PageTakeTest(Service1Client service1Client)
         {
             InitializeComponent();
-            test = new Test();
+            test = new TestUI();
             _service1Client = service1Client;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            test.Questions.ToList().Add(new Question());
-            test.Questions.ToList()[0].Answers.ToList().Add(new Answer());
-            test.Questions.ToList()[0].Answers.ToList().Add(new Answer());
-            test.Questions.ToList()[0].Answers.ToList().Add(new Answer());
+            var listtmp = test.Questions.ToList();
+            listtmp.Add(new QuestionUI());
+            listtmp[0].Answers.ToList().Add(new AnswerUI());
+            listtmp[0].Answers.ToList().Add(new AnswerUI());
+            listtmp[0].Answers.ToList().Add(new AnswerUI());
             for (int i = 0; i < test.Questions.ToList()[0].Answers.Count(); i++)
             {
                 test.Questions.ToList()[0].Answers.ToList()[0].Text = "1";
             }
             test.Questions.ToList()[0].Text = "Some";
-            foreach (Question question in test.Questions)
+            foreach (QuestionUI question in test.Questions)
             {
-                List<Question> ListQuestion = new List<Question>();
-                List<Answer> ListAnswer = new List<Answer>();
-                ListQuestion.Add(new Question() { Text = question.Text });
-                foreach(Answer answer in question.Answers)
+                List<QuestionUI> ListQuestion = new List<QuestionUI>();
+                List<AnswerUI> ListAnswer = new List<AnswerUI>();
+                ListQuestion.Add(new QuestionUI() { Text = question.Text });
+                foreach(AnswerUI answer in question.Answers)
                 {
                     ListAnswer.Add(answer);
                 }
