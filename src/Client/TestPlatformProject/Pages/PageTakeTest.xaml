@@ -26,7 +26,7 @@
                     </StackPanel>
                     
                 </StackPanel>
-                    <Button HorizontalAlignment="Right" Margin="10" FontSize="15" Foreground="White" Background="OrangeRed">Отправить</Button>
+                    <Button HorizontalAlignment="Right" Margin="10" FontSize="15" Foreground="White" Background="OrangeRed" Click="Button_Send">Отправить</Button>
                 </StackPanel>
             </ScrollViewer>
             

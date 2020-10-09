@@ -26,5 +26,14 @@ namespace TestPlatformProject.Pages
 
             _service1Client = service1Client;
         }
+
+        private void Button_TakeTest(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Exit(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
