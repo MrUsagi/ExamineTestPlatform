@@ -26,6 +26,8 @@
                         
                     </StackPanel>
                     <Button x:Name="AddAnswerButton" Background="OrangeRed" Foreground="White" Width="200" Margin="0,15,0,0" >Добавить ответ</Button>
+                    <Button x:Name="AddQuestionButton" Background="OrangeRed" Foreground="White" Width="200" Margin="0,15,0,0" >Добавить вопрос</Button>
+                    <Button x:Name="AddTestButton" Background="OrangeRed" Foreground="White" Width="200" Margin="0,15,0,0" >Сохранить тест</Button>
 
                 </StackPanel>
             </ScrollViewer>
