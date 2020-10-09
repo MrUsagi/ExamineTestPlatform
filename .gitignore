@@ -17,3 +17,8 @@ src/Server/TestPlatformServices/.vs/TestPlatformServices/v16/Server/sqlite3/stor
 src/Server/TestPlatformServices/.vs/TestPlatformServices/v16/Server/sqlite3/db.lock
 src/Server/TestPlatformServices/.vs/TestPlatformServices/v16/.suo
 src/Server/TestPlatformServices/.vs/TestPlatformServices/config/applicationhost.config
+src/Server/TestPlatformServices2/.vs/TestPlatformServices2/v16/Server/sqlite3/db.lock
+src/Server/TestPlatformServices2/.vs/TestPlatformServices2/v16/Server/sqlite3/storage.ide
+src/Server/TestPlatformServices2/.vs/TestPlatformServices2/v16/Server/sqlite3/storage.ide-shm
+src/Server/TestPlatformServices2/.vs/TestPlatformServices2/v16/Server/sqlite3/storage.ide-wal
+src/Server/TestPlatformServices2/TestPlatformServices2/bin/System.Data.Common.dll
