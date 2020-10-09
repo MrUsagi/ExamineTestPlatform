@@ -16,6 +16,10 @@
       "*, ServiceReference1"
     ],
     "references": [
+      "Microsoft.Extensions.Configuration.Abstractions, {Microsoft.Extensions.Configuration.Abstractions, 3.1.8}",
+      "Microsoft.Extensions.DependencyInjection, {Microsoft.Extensions.DependencyInjection, 3.1.8}",
+      "Microsoft.Extensions.DependencyInjection.Abstractions, {Microsoft.Extensions.DependencyInjection.Abstractions, 3.1.8}",
+      "Microsoft.Extensions.Primitives, {Microsoft.Extensions.Primitives, 3.1.8}",
       "System.ServiceModel, {System.ServiceModel.Primitives, 4.4.4}",
       "System.ServiceModel.Duplex, {System.ServiceModel.Duplex, 4.4.4}",
       "System.ServiceModel.Http, {System.ServiceModel.Http, 4.4.4}",

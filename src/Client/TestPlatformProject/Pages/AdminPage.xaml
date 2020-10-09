@@ -5,31 +5,47 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TestPlatformProject.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="600" d:DesignWidth="400"
+      d:DesignHeight="450" d:DesignWidth="800"
       Title="AdminPage">
-
     <Grid Background="LightGray">
-        <Grid Background="LightYellow" Margin="10">
+
+
+        <Grid Margin="10" Background="LightYellow">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.7*"></RowDefinition>
-                <RowDefinition Height="1.2*"></RowDefinition>
-                <RowDefinition Height="0.2*"></RowDefinition>
-                <RowDefinition Height="0.4*"></RowDefinition>
-                <RowDefinition Height="0.2*"></RowDefinition>
-                <RowDefinition Height="0.4*"></RowDefinition>
-                <RowDefinition Height="0.2*"></RowDefinition>
-                <RowDefinition Height="0.6*"></RowDefinition>
-                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" Foreground="OrangeRed">Добавления Теста</TextBlock>
-            <Image Grid.Row="1" Source="\Images\logo.png"></Image>
-            <TextBlock Foreground="OrangeRed" Grid.Row="2" Margin="60,10,0,0" FontStyle="Italic">Введите название теста:</TextBlock>
-            <TextBlock Foreground="OrangeRed" Grid.Row="4" Margin="60,10,0,0" FontStyle="Italic">Сколько вопросов будет в тесте:</TextBlock>
-            <TextBlock Foreground="OrangeRed" Grid.Row="6" Margin="60,10,0,0" FontStyle="Italic">Описание теста:</TextBlock>
-            <TextBox x:Name="AddNameTestTextBox" Grid.Row="3" Margin="60,7,60,25"></TextBox>
-            <TextBox x:Name="AddCountQustionTextBox" Grid.Row="5" Margin="60,7,60,25" ></TextBox>
-            <TextBox x:Name="AddDescriptionTextBox" Grid.Row="7" Margin="60,7,60,7" TextWrapping="Wrap"></TextBox>
-            <Button x:Name="AddtTestButton" Grid.Row="8" Margin="80,10,80,10" Background="OrangeRed" Foreground="White" FontSize="17">Добавить</Button>
+            <TextBlock Margin="10"  Foreground="OrangeRed" HorizontalAlignment="Center">Список тестов</TextBlock>
+            <ScrollViewer Margin="10,40,10,50" Grid.RowSpan="2">
+                <ListView  Name="TestsLIstView" Background="LightGray">
+
+                </ListView>
+            </ScrollViewer>
+            <TextBlock Grid.Column="1" Margin="10" FontSize="40" HorizontalAlignment="Center" Foreground="OrangeRed">Описание</TextBlock>
+            <TextBlock Grid.Column="1" Margin="70" Foreground="OrangeRed" TextWrapping="Wrap">Описание Теста</TextBlock>
+            <Image Source="/Images/Logo.png" Grid.Column="1" HorizontalAlignment="Left" Margin="50,190,0,20" Grid.RowSpan="2"/>
+            <Button Grid.Column="0" Grid.Row="2" Width="150" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10" Foreground="White" FontSize="14" Background="OrangeRed" Click="AddTestButton_Click">Добавить тест</Button>
+            <Button Grid.Column="0" Grid.Row="2" Width="150" Grid.ColumnSpan="4" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="170,10,10,10" Foreground="White" FontSize="14" Background="OrangeRed" Click="DeleteTestButton_Click">Удалить тест</Button>
+
+            <Button Grid.Column="2" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,5,10,0" Foreground="White" Background="OrangeRed" FontSize="14" Height="2">Выход</Button>
+
+
+            <Button Grid.Column="1" Grid.Row="1" Width="150" Grid.ColumnSpan="10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,170,10" Foreground="White" Background="OrangeRed" FontSize="14" Click="DeleteAskButton_Click">Удалить вопрос</Button>
+            <Button Grid.Column="1" Grid.Row="1" Width="150" Grid.ColumnSpan="10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,10" Foreground="White" Background="OrangeRed" FontSize="14" Click="AddAskButton_Click">Добавить вопрос</Button>
+
+            <ScrollViewer Margin="10,40,10,50" Grid.Column="3" Grid.RowSpan="2">
+                <ListBox  Name="QuastionLIstView" Background="LightGray">
+                </ListBox>
+            </ScrollViewer>
+
+
+
         </Grid>
+
     </Grid>
 </Page>

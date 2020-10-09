@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -15,8 +16,28 @@ namespace TestPlatformServices2
     {
         [OperationContract]
         Task<bool> IsLogin(string password, string login);
+
+        [OperationContract]
+        Task<bool> IsAdmin(string login);
+
         [OperationContract]
         Task<bool> Registration(string password, string login, string fio, string email);
+
+        [OperationContract]
+        Task<bool> AddTest(Test test);
+
+        [OperationContract]
+        Task<bool> AddQuestion(Question question);
+
+        [OperationContract]
+        Task<bool> RemoveTest(int testId);
+
+        [OperationContract]
+        Task<bool> RemoveQuestion(int qestionId);
+
+
+
+        Task<List<Test>> GetTests();
 
 
         // TODO: Добавьте здесь операции служб

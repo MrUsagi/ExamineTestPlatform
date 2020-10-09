@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceReference1;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,9 +19,12 @@ namespace TestPlatformProject.Pages
     /// </summary>
     public partial class UserPage : Page
     {
-        public UserPage()
+        private readonly Service1Client _service1Client;
+        public UserPage(Service1Client service1Client)
         {
             InitializeComponent();
+
+            _service1Client = service1Client;
         }
     }
 }
