@@ -17,7 +17,9 @@ namespace TestPlatformServices
         string GetData(int value);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        bool IsLogin(string password, string login);
+        bool Registration(string password, string login, string fio, string email);
+        bool Connect();
 
         // TODO: Добавьте здесь операции служб
     }

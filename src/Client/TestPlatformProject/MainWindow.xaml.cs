@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ServiceReference1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,15 @@ namespace TestPlatformProject
     /// </summary>
     public partial class MainWindow : Window
     {
+        Service1Client service1Client = new Service1Client();
         public MainWindow()
         {
             InitializeComponent();
+
+            MessageBox.Show(service1Client.GetDataAsync(3).Result);
         }
+
+        
+
     }
 }
