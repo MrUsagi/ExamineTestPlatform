@@ -26,5 +26,11 @@ namespace TestPlatformProject.Pages
 
             _service1Client = service1Client;
         }
+
+        private void AddtTestButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            this.NavigationService.Navigate(new ChangesTestPage(_service1Client));
+        }
     }
 }

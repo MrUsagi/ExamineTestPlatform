@@ -29,7 +29,7 @@
             <TextBox x:Name="AddNameTestTextBox" Grid.Row="3" Margin="60,7,60,25"></TextBox>
             <TextBox x:Name="AddCountQustionTextBox" Grid.Row="5" Margin="60,7,60,25" ></TextBox>
             <TextBox x:Name="AddDescriptionTextBox" Grid.Row="7" Margin="60,7,60,7" TextWrapping="Wrap"></TextBox>
-            <Button x:Name="AddtTestButton" Grid.Row="8" Margin="80,10,80,10" Background="OrangeRed" Foreground="White" FontSize="17">Добавить</Button>
+            <Button x:Name="AddtTestButton" Grid.Row="8" Margin="80,10,80,10" Background="OrangeRed" Foreground="White" FontSize="17" Click="AddtTestButton_Click">Добавить</Button>
         </Grid>
     </Grid>
 </Page>
