@@ -1,0 +1,6 @@
+C:\Users\Usagi\Desktop\ExamineTestPlatform\src\Services\TestPlatformServices\bin\TestPlatformServices.dll.config
+C:\Users\Usagi\Desktop\ExamineTestPlatform\src\Services\TestPlatformServices\bin\TestPlatformServices.dll
+C:\Users\Usagi\Desktop\ExamineTestPlatform\src\Services\TestPlatformServices\bin\TestPlatformServices.pdb
+C:\Users\Usagi\Desktop\ExamineTestPlatform\src\Services\TestPlatformServices\obj\Debug\TestPlatformServices.csprojAssemblyReference.cache
+C:\Users\Usagi\Desktop\ExamineTestPlatform\src\Services\TestPlatformServices\obj\Debug\TestPlatformServices.dll
+C:\Users\Usagi\Desktop\ExamineTestPlatform\src\Services\TestPlatformServices\obj\Debug\TestPlatformServices.pdb
