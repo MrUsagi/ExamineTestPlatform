@@ -36,7 +36,7 @@ namespace TestPlatformProject.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
+            TextBlock_NameTest.Text = test.Name;
             //var listtmp = test.Questions.ToList();
             //listtmp.Add(new QuestionUI());
             //var listtmpanswer = listtmp[0].Answers.ToList();
