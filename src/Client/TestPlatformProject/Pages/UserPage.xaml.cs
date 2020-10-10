@@ -1,4 +1,5 @@
-﻿using ServiceReference1;
+﻿using DataAccess.ModelsUI;
+using ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,13 +33,23 @@ namespace TestPlatformProject.Pages
         {
             var lisr =  (await _service1Client.GetTestsAsync()).ToList();
 
-            TestListView.Items.Clear();
+          //  TestListView.Items.Clear();
             TestListView.ItemsSource = lisr;
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new LoginPage(_service1Client));
+        }
+
+        private void Button_TakeTest(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new PageTakeTest(_service1Client,((Test)TestListView.SelectedItem)));
+        }
+
+        private void TestListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(((Test)TestListView.SelectedItem)!=null)TextBlockDescription.Text = ((Test)TestListView.SelectedItem).Description;
         }
     }
 }

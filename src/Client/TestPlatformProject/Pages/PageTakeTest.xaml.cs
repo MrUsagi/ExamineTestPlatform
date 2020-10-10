@@ -22,15 +22,13 @@ namespace TestPlatformProject.Pages
     /// </summary>
     public partial class PageTakeTest : Page
     {
-        UserUI user;
-        TestUI test;
+        Test test;
 
         private readonly Service1Client _service1Client;
-        public PageTakeTest(Service1Client service1Client)
+        public PageTakeTest(Service1Client service1Client,Test test)
         {
             InitializeComponent();
-            test = new TestUI();
-            user = new UserUI();
+            this.test = test;
             _service1Client = service1Client;
         }
 
@@ -44,11 +42,11 @@ namespace TestPlatformProject.Pages
             //listtmpanswer.Add(new AnswerUI() { Text = "1" });
             //listtmpanswer.Add(new AnswerUI() { Text = "2" });
             //listtmpanswer.Add(new AnswerUI() { Text = "3" });
-            foreach (QuestionUI question in test.Questions)
+            foreach (Question question in test.Questions)
             {
-                List<QuestionUI> ListQuestion = new List<QuestionUI>();
-                List<AnswerUI> ListAnswer = new List<AnswerUI>();
-                ListQuestion.Add(new QuestionUI() { Text = question.Text });
+                List<Question> ListQuestion = new List<Question>();
+                List<Answer> ListAnswer = new List<Answer>();
+                ListQuestion.Add(new Question() { Text = question.Text });
                 for (int i = 0; i < question.Answers.Count(); i++)
                 {
                     ListAnswer.Add(question.Answers.ToList()[i]);
@@ -94,12 +92,12 @@ namespace TestPlatformProject.Pages
             //}
         }
 
-        private void Button_Send(object sender, RoutedEventArgs e)
+        private async void Button_Send(object sender, RoutedEventArgs e)
         {
             int balls = 0;
             for (int i = 0; i < StackPanel_Test.Children.Count; i++)
             {
-                foreach (AnswerUI answerUI in test.Questions.ToList()[i].Answers.ToList())
+                foreach (Answer answerUI in test.Questions.ToList()[i].Answers.ToList())
                 {
                     for (int j = 2; j < 5; j++)
                     {
@@ -110,7 +108,7 @@ namespace TestPlatformProject.Pages
                     }
                 }
             }
-            _service1Client.AddResoultTestAsync(test.Id, user.Id, balls);
+            await _service1Client.AddResoultTestAsync(test.Id,(await _service1Client.GetUserAsync()).Id, balls);
         }
     }
 }
