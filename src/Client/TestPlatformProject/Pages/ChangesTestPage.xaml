@@ -14,9 +14,9 @@
                 <StackPanel x:Name="ChangesQestionScrollPanel" Orientation="Vertical">
                     <TextBlock FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" Foreground="OrangeRed">Работа с тестом</TextBlock>
                     <TextBlock FontSize="15" FontStyle="Italic" Foreground="OrangeRed" Margin="40,30,40,0">Введите вопрос:</TextBlock>
-                    <TextBox Margin="40,10,40,0"></TextBox>
+                    <TextBox Name="questionBox" Margin="40,10,40,0"></TextBox>
                     <TextBlock FontSize="15" FontStyle="Italic" Foreground="OrangeRed" Margin="40,30,40,0">Введите URL фото если оно надо:</TextBlock>
-                    <TextBox Margin="40,10,40,0"></TextBox>
+                    <TextBox Name="imageBox" Margin="40,10,40,0"></TextBox>
                     <StackPanel x:Name="ChangesAnswerScrollPanel" Orientation="Vertical">
                         <TextBlock FontSize="15" FontStyle="Italic" Foreground="OrangeRed" Margin="40,30,40,0">Вариант ответа:</TextBlock>
                         <StackPanel Orientation="Horizontal">
@@ -25,8 +25,8 @@
                         </StackPanel>
                     </StackPanel>
                     <Button x:Name="AddAnswerButton" Background="OrangeRed" Foreground="White" Width="200" Margin="0,15,0,0" >Добавить ответ</Button>
-                    <Button x:Name="AddQuestionButton" Background="OrangeRed" Foreground="White" Width="200" Margin="0,15,0,0" >Добавить вопрос</Button>
-                    <Button x:Name="AddTestButton" Background="OrangeRed" Foreground="White" Width="200" Margin="0,15,0,0" >Сохранить тест</Button>
+                    <Button x:Name="AddQuestionButton" Background="OrangeRed" Foreground="White" Width="200" Margin="0,15,0,0" Click="AddQuestionButton_Click">Сохранить вопрос</Button>
+                    <!--<Button x:Name="AddTestButton" Background="OrangeRed" Foreground="White" Width="200" Margin="0,15,0,0" >Сохранить тест</Button>-->
                 </StackPanel>
             </ScrollViewer>
         </Grid>

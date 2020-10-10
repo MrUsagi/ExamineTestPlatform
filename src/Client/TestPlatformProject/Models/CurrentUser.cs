@@ -8,5 +8,6 @@ namespace TestPlatformProject.Models
     public static class CurrentUser
     {
         public static User User;
+        public static Test SelectedTest;
     }
 }

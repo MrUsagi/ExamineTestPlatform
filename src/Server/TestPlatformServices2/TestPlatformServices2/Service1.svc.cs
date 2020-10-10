@@ -137,5 +137,19 @@ namespace TestPlatformServices2
             var test = await unitOfWork.Tests.FindByConditionAsync(x => x.Id == testId);
             return test.FirstOrDefault();
         }
+
+        public async Task<bool> AddAnswer(Answer answer)
+        {
+            try
+            {
+                await unitOfWork.Answers.CreateAsync(answer);
+                await unitOfWork.SaveAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

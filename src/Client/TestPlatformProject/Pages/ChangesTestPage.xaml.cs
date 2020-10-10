@@ -1,6 +1,7 @@
 ﻿using ServiceReference1;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestPlatformProject.Models;
 
 namespace TestPlatformProject.Pages
 {
@@ -26,7 +28,7 @@ namespace TestPlatformProject.Pages
 
             _service1Client = service1Client;
             AddAnswerButton.Click += clickLastButton;
-            AddQuestionButton.Click += clickFirstButton;
+            //AddQuestionButton.Click += clickFirstButton;
         }
 
         private void clickFirstButton(object sender, RoutedEventArgs e)
@@ -52,6 +54,25 @@ namespace TestPlatformProject.Pages
             ((StackPanel)ChangesAnswerScrollPanel.Children[ChangesAnswerScrollPanel.Children.Count - 1]).Children.Add(new TextBox() { Width = 200, Height = 17, Margin = new Thickness(40, 10, 20, 0) });
             ((StackPanel)ChangesAnswerScrollPanel.Children[ChangesAnswerScrollPanel.Children.Count - 1]).Children.Add(new CheckBox() { Margin = new Thickness(15, 12, 0, 0) });
 
+        }
+
+        private async void AddQuestionButton_Click(object sender, RoutedEventArgs e)
+        {
+            await _service1Client.AddQuestionAsync(new Question() { ImageURL = imageBox.Text, Text = questionBox.Text, TestId = CurrentUser.SelectedTest.Id });
+            var questions = await _service1Client.LoadQuestionsAsync(CurrentUser.SelectedTest.Id);
+            var id = questions.Last().Id;
+            foreach(var child in ChangesAnswerScrollPanel.Children)
+            {
+                 if(child is StackPanel stack)
+                {
+                    await _service1Client.AddAnswerAsync(new Answer()
+                    {
+                        IsCorrect = (bool)(stack.Children[1] as CheckBox).IsChecked,
+                        QuestionId = id,
+                        Text = (stack.Children[0] as TextBox).Text
+                    });
+                }
+            }
         }
     }
 }

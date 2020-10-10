@@ -25,7 +25,35 @@ namespace DataAccess.Context.Initializers
             });
             context.SaveChanges();
 
-            context.Tests.Add(new Test() { Name = "MyTest", Description = "fuck you", TryNumber = 5, IsRemove = false });
+            context.Tests.Add(new Test()
+            {
+                Name = "MyTest",
+                Description = "fuck you",
+                TryNumber = 5,
+                IsRemove = false,
+                Questions = new List<Question>() {
+                    new Question(){
+                        Text = "White and ...",
+                        Answers = new List<Answer>()
+                        {
+                            new Answer() {
+                                IsCorrect = true,
+                                Text = "Black"
+                            },
+                            new Answer()
+                            {
+                                IsCorrect = false,
+                                Text = "Green"
+                            },
+                            new Answer()
+                            {
+                                IsCorrect = false,
+                                Text = "Blue"
+                            }
+                        }
+                    }
+                }
+            }) ;
 
             context.SaveChanges();
         }

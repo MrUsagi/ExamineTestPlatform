@@ -24,10 +24,10 @@
             <TextBlock FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" Foreground="OrangeRed">Добавления Теста</TextBlock>
             <Image Grid.Row="1" Source="\Images\logo.png"></Image>
             <TextBlock Foreground="OrangeRed" Grid.Row="2" Margin="60,10,0,0" FontStyle="Italic">Введите название теста:</TextBlock>
-            <TextBlock Foreground="OrangeRed" Grid.Row="4" Margin="60,10,0,0" FontStyle="Italic">Сколько вопросов будет в тесте:</TextBlock>
+            <!--<TextBlock Foreground="OrangeRed" Grid.Row="4" Margin="60,10,0,0" FontStyle="Italic">Сколько вопросов будет в тесте:</TextBlock>-->
             <TextBlock Foreground="OrangeRed" Grid.Row="6" Margin="60,10,0,0" FontStyle="Italic">Описание теста:</TextBlock>
             <TextBox x:Name="AddNameTestTextBox" Grid.Row="3" Margin="60,7,60,25"></TextBox>
-            <TextBox x:Name="AddCountQustionTextBox" Grid.Row="5" Margin="60,7,60,25" ></TextBox>
+            <!--<TextBox x:Name="AddCountQustionTextBox" Grid.Row="5" Margin="60,7,60,25" ></TextBox>-->
             <TextBox x:Name="AddDescriptionTextBox" Grid.Row="7" Margin="60,7,60,7" TextWrapping="Wrap"></TextBox>
             <Button x:Name="AddtTestButton" Grid.Row="8" Margin="80,10,80,10" Background="OrangeRed" Foreground="White" FontSize="17" Click="AddtTestButton_Click">Добавить</Button>
         </Grid>

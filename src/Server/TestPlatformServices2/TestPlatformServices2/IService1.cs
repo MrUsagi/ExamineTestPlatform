@@ -54,6 +54,9 @@ namespace TestPlatformServices2
         [OperationContract]
         Task<Test> GetTest(int testId);
 
+        [OperationContract]
+        Task<bool> AddAnswer(Answer answer); 
+
         // TODO: Добавьте здесь операции служб
     }
 

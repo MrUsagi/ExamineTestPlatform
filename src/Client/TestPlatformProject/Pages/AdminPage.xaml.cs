@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestPlatformProject.Models;
 
 namespace TestPlatformProject.Pages
 {
@@ -61,7 +62,8 @@ namespace TestPlatformProject.Pages
         {
             if(TestsLIstView.SelectedItem != null)
             {
-                this.DataContext = await _service1Client.GetTestAsync((TestsLIstView.SelectedItem as Test).Id);
+                CurrentUser.SelectedTest = await _service1Client.GetTestAsync((TestsLIstView.SelectedItem as Test).Id);
+                this.DataContext = CurrentUser.SelectedTest;
                 //QuastionLIstView.Items.Clear();
                 QuastionLIstView.ItemsSource = null;
                 var questions = await _service1Client.LoadQuestionsAsync((TestsLIstView.SelectedItem as Test).Id);

@@ -288,6 +288,88 @@ namespace ServiceReference1
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Answer", Namespace="http://schemas.datacontract.org/2004/07/DataAccess.Models")]
+    public partial class Answer : object
+    {
+        
+        private int IdField;
+        
+        private bool IsCorrectField;
+        
+        private bool IsRemoveField;
+        
+        private int QuestionIdField;
+        
+        private string TextField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsCorrect
+        {
+            get
+            {
+                return this.IsCorrectField;
+            }
+            set
+            {
+                this.IsCorrectField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsRemove
+        {
+            get
+            {
+                return this.IsRemoveField;
+            }
+            set
+            {
+                this.IsRemoveField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int QuestionId
+        {
+            get
+            {
+                return this.QuestionIdField;
+            }
+            set
+            {
+                this.QuestionIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Text
+        {
+            get
+            {
+                return this.TextField;
+            }
+            set
+            {
+                this.TextField = value;
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1
@@ -331,6 +413,9 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTest", ReplyAction="http://tempuri.org/IService1/GetTestResponse")]
         System.Threading.Tasks.Task<ServiceReference1.Test> GetTestAsync(int testId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddAnswer", ReplyAction="http://tempuri.org/IService1/AddAnswerResponse")]
+        System.Threading.Tasks.Task<bool> AddAnswerAsync(ServiceReference1.Answer answer);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -446,6 +531,11 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<ServiceReference1.Test> GetTestAsync(int testId)
         {
             return base.Channel.GetTestAsync(testId);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddAnswerAsync(ServiceReference1.Answer answer)
+        {
+            return base.Channel.AddAnswerAsync(answer);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
