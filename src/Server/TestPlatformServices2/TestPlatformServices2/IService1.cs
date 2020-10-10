@@ -36,7 +36,10 @@ namespace TestPlatformServices2
         Task<bool> RemoveQuestion(int qestionId);
 
 
+        [OperationContract]
+        Task<bool> AddResoultTest(int idTest, int idUser, int result);
 
+        [OperationContract]
         Task<List<Test>> GetTests();
 
 

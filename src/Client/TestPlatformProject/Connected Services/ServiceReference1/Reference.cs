@@ -679,6 +679,12 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/RemoveQuestion", ReplyAction="http://tempuri.org/IService1/RemoveQuestionResponse")]
         System.Threading.Tasks.Task<bool> RemoveQuestionAsync(int qestionId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddResoultTest", ReplyAction="http://tempuri.org/IService1/AddResoultTestResponse")]
+        System.Threading.Tasks.Task<bool> AddResoultTestAsync(int idTest, int idUser, int result);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTests", ReplyAction="http://tempuri.org/IService1/GetTestsResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.Test[]> GetTestsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -764,6 +770,16 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<bool> RemoveQuestionAsync(int qestionId)
         {
             return base.Channel.RemoveQuestionAsync(qestionId);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddResoultTestAsync(int idTest, int idUser, int result)
+        {
+            return base.Channel.AddResoultTestAsync(idTest, idUser, result);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.Test[]> GetTestsAsync()
+        {
+            return base.Channel.GetTestsAsync();
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
