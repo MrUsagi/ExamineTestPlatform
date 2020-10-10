@@ -22,6 +22,7 @@ namespace TestPlatformProject.Pages
     /// </summary>
     public partial class PageTakeTest : Page
     {
+        UserUI user;
         TestUI test;
 
         private readonly Service1Client _service1Client;
@@ -29,12 +30,13 @@ namespace TestPlatformProject.Pages
         {
             InitializeComponent();
             test = new TestUI();
+            user = new UserUI();
             _service1Client = service1Client;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
+            TextBlock_NameTest.Text = test.Name;
             //var listtmp = test.Questions.ToList();
             //listtmp.Add(new QuestionUI());
             //var listtmpanswer = listtmp[0].Answers.ToList();
@@ -108,6 +110,7 @@ namespace TestPlatformProject.Pages
                     }
                 }
             }
+            _service1Client.AddResoultTestAsync(test.Id, user.Id, balls);
         }
     }
 }
