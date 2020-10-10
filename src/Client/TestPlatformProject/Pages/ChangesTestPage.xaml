@@ -23,10 +23,10 @@
                             <TextBox Margin="40,10,20,0" Width="200" Height="17"></TextBox>
                             <CheckBox Margin="15,12,0,0"></CheckBox>
                         </StackPanel>
-                        
                     </StackPanel>
                     <Button x:Name="AddAnswerButton" Background="OrangeRed" Foreground="White" Width="200" Margin="0,15,0,0" >Добавить ответ</Button>
-
+                    <Button x:Name="AddQuestionButton" Background="OrangeRed" Foreground="White" Width="200" Margin="0,15,0,0" >Добавить вопрос</Button>
+                    <Button x:Name="AddTestButton" Background="OrangeRed" Foreground="White" Width="200" Margin="0,15,0,0" >Сохранить тест</Button>
                 </StackPanel>
             </ScrollViewer>
         </Grid>

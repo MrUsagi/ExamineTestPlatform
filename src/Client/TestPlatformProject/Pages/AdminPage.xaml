@@ -20,7 +20,7 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock Margin="10"  Foreground="OrangeRed" HorizontalAlignment="Center">Список тестов</TextBlock>
+            <TextBlock Margin="10" FontStyle="Italic" Foreground="OrangeRed" HorizontalAlignment="Center">Список тестов</TextBlock>
             <ScrollViewer Margin="10,40,10,50" Grid.RowSpan="2">
                 <ListView  Name="TestsLIstView" Background="LightGray" SelectionChanged="TestsLIstView_SelectionChanged">
                     <ListView.ItemTemplate>
@@ -30,8 +30,8 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </ScrollViewer>
-            <TextBlock Grid.Column="1" Margin="10" FontSize="40" HorizontalAlignment="Center" Foreground="OrangeRed">Описание</TextBlock>
-            <TextBlock Grid.Column="1" Margin="70" Foreground="OrangeRed" TextWrapping="Wrap">Описание Теста</TextBlock>
+            <TextBlock Grid.Column="1" Margin="10" FontStyle="Italic" FontSize="40" HorizontalAlignment="Center" Foreground="OrangeRed">Описание</TextBlock>
+            <TextBlock Grid.Column="1" Margin="70" FontStyle="Italic" Foreground="OrangeRed" TextWrapping="Wrap">Описание Теста</TextBlock>
             <Image Source="/Images/Logo.png" Grid.Column="1" HorizontalAlignment="Left" Margin="50,190,0,20" Grid.RowSpan="2"/>
             <Button Grid.Column="0" Grid.Row="2" Width="150" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10" Foreground="White" FontSize="14" Background="OrangeRed" Click="AddTestButton_Click">Добавить тест</Button>
             <Button Grid.Column="0" Grid.Row="2" Width="150" Grid.ColumnSpan="4" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="170,10,10,10" Foreground="White" FontSize="14" Background="OrangeRed" Click="DeleteTestButton_Click">Удалить тест</Button>
