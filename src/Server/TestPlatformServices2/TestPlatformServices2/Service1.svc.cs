@@ -16,9 +16,11 @@ namespace TestPlatformServices2
     public class Service1 : IService1
     {
         private readonly UnitOfWork unitOfWork;
+        public User user;
         public Service1()
         {
             unitOfWork = UnitOfWork.GetInstance();
+            user = new User();
         }
 
         public async Task<bool> AddQuestion(Question question)
@@ -80,7 +82,12 @@ namespace TestPlatformServices2
 
         public async Task<bool> IsLogin(string password, string login)
         {
-            if ((await unitOfWork.Logins.FindByConditionAsync(x => x.Login == login && x.Password == password)).Any()) return true;
+            if ((await unitOfWork.Logins.FindByConditionAsync(x => x.Login == login && x.Password == password)).Any())
+            {
+                user = (await unitOfWork.Users.FindByConditionAsync(x => x.Login.Login == login && x.Login.Password == password)).First();
+                return true;
+            }
+
             return false;
         }
 

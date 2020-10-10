@@ -38,8 +38,7 @@ namespace TestPlatformProject.Pages
             {
                 TestsLIstView.Items.RemoveAt(TestsLIstView.SelectedIndex);
 
-
-                //await _service1Client.RemoveTestAsync();
+                // _service1Client.RemoveTestAsync();
                 //TODO add request to service 
             }
         }
