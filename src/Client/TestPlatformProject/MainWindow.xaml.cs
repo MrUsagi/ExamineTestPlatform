@@ -33,7 +33,7 @@ namespace TestPlatformProject
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            mainFrame.NavigationService.Navigate(new UserPage(_service1Client));
+            mainFrame.NavigationService.Navigate(new LoginPage(_service1Client));
         }
     }
 }
