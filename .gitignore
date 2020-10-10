@@ -22,3 +22,6 @@ src/Server/TestPlatformServices2/.vs/TestPlatformServices2/v16/Server/sqlite3/st
 src/Server/TestPlatformServices2/.vs/TestPlatformServices2/v16/Server/sqlite3/storage.ide-shm
 src/Server/TestPlatformServices2/.vs/TestPlatformServices2/v16/Server/sqlite3/storage.ide-wal
 src/Server/TestPlatformServices2/TestPlatformServices2/bin/System.Data.Common.dll
+src/Client/.vs/TestPlatformProject/v16/Server/sqlite3/storage.ide-shm
+src/Client/.vs/TestPlatformProject/v16/Server/sqlite3/storage.ide-wal
+src/Server/TestPlatformServices2/.vs/TestPlatformServices2/v16/.suo
