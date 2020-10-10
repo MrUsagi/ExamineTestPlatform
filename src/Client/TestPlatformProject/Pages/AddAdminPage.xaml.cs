@@ -26,5 +26,14 @@ namespace TestPlatformProject.Pages
 
             _service1Client = service1Client;
         }
+
+        private void AddtTestButton_Click(object sender, RoutedEventArgs e)
+        {
+            int tryCount;
+            if (int.TryParse(AddDescriptionTextBox.Text, out tryCount))
+            {
+                _service1Client.AddTestAsync(new Test() { Name = AddNameTestTextBox.Text, Description = AddDescriptionTextBox.Text, TryNumber = tryCount, IsRemove = false });
+            }
+        }
     }
 }

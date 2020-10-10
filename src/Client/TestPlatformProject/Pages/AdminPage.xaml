@@ -22,8 +22,12 @@
             </Grid.RowDefinitions>
             <TextBlock Margin="10"  Foreground="OrangeRed" HorizontalAlignment="Center">Список тестов</TextBlock>
             <ScrollViewer Margin="10,40,10,50" Grid.RowSpan="2">
-                <ListView  Name="TestsLIstView" Background="LightGray">
-
+                <ListView  Name="TestsLIstView" Background="LightGray" SelectionChanged="TestsLIstView_SelectionChanged">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}"></TextBlock>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
                 </ListView>
             </ScrollViewer>
             <TextBlock Grid.Column="1" Margin="10" FontSize="40" HorizontalAlignment="Center" Foreground="OrangeRed">Описание</TextBlock>
@@ -39,8 +43,13 @@
             <Button Grid.Column="1" Grid.Row="1" Width="150" Grid.ColumnSpan="10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,10" Foreground="White" Background="OrangeRed" FontSize="14" Click="AddAskButton_Click">Добавить вопрос</Button>
 
             <ScrollViewer Margin="10,40,10,50" Grid.Column="3" Grid.RowSpan="2">
-                <ListBox  Name="QuastionLIstView" Background="LightGray">
-                </ListBox>
+                <ListView  Name="QuastionLIstView" Background="LightGray">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}"></TextBlock>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </ScrollViewer>
 
 

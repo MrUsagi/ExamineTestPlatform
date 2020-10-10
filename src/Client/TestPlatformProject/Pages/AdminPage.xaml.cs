@@ -56,5 +56,14 @@ namespace TestPlatformProject.Pages
         {
             this.NavigationService.Navigate(new ChangesTestPage(_service1Client));
         }
+
+        private void TestsLIstView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(TestsLIstView.SelectedItem != null)
+            {
+                QuastionLIstView.Items.Clear();
+                QuastionLIstView.ItemsSource = (TestsLIstView.SelectedItem as Test).Questions;
+            }
+        }
     }
 }
