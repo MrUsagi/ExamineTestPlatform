@@ -43,35 +43,35 @@ namespace TestPlatformProject.Pages
             //listtmpanswer.Add(new AnswerUI() { Text = "1" });
             //listtmpanswer.Add(new AnswerUI() { Text = "2" });
             //listtmpanswer.Add(new AnswerUI() { Text = "3" });
-            foreach (Question question in test.Questions)
-            {
-                List<Question> ListQuestion = new List<Question>();
-                List<Answer> ListAnswer = new List<Answer>();
-                ListQuestion.Add(new Question() { Text = question.Text });
-                for (int i = 0; i < question.Answers.Count(); i++)
-                {
-                    ListAnswer.Add(question.Answers.ToList()[i]);
-                }
+            //foreach (Question question in test.Questions)
+            //{
+            //    List<Question> ListQuestion = new List<Question>();
+            //    List<Answer> ListAnswer = new List<Answer>();
+            //    ListQuestion.Add(new Question() { Text = question.Text });
+            //    for (int i = 0; i < question.Answers.Count(); i++)
+            //    {
+            //        ListAnswer.Add(question.Answers.ToList()[i]);
+            //    }
 
 
-                StackPanel stackPanel = new StackPanel();
-                stackPanel.Margin = new Thickness(10);
-                stackPanel.Children.Add(new Image());
-                stackPanel.Children.Add(new TextBlock());
+            //    StackPanel stackPanel = new StackPanel();
+            //    stackPanel.Margin = new Thickness(10);
+            //    stackPanel.Children.Add(new Image());
+            //    stackPanel.Children.Add(new TextBlock());
 
-                ((TextBlock)stackPanel.Children[1]).Text = ListQuestion[0].Text;
-                for (int i = 0; i < ListAnswer.Count; i++)
-                {
-                    stackPanel.Children.Add(new CheckBox() { Content = ListAnswer[i].Text });
-                }
-                if (ListQuestion[0].ImageURL != null)
-                {
-                    ((Image)stackPanel.Children[0]).Source = (ImageSource)new ImageSourceConverter().ConvertFrom(ListQuestion[0].ImageURL);
-                }
-                else
-                    stackPanel.Children[0].Visibility = Visibility.Hidden;
-                StackPanel_Test.Children.Add(stackPanel);
-            }
+            //    ((TextBlock)stackPanel.Children[1]).Text = ListQuestion[0].Text;
+            //    for (int i = 0; i < ListAnswer.Count; i++)
+            //    {
+            //        stackPanel.Children.Add(new CheckBox() { Content = ListAnswer[i].Text });
+            //    }
+            //    if (ListQuestion[0].ImageURL != null)
+            //    {
+            //        ((Image)stackPanel.Children[0]).Source = (ImageSource)new ImageSourceConverter().ConvertFrom(ListQuestion[0].ImageURL);
+            //    }
+            //    else
+            //        stackPanel.Children[0].Visibility = Visibility.Hidden;
+            //    StackPanel_Test.Children.Add(stackPanel);
+            //}
 
 
 
@@ -95,21 +95,21 @@ namespace TestPlatformProject.Pages
 
         private async void Button_Send(object sender, RoutedEventArgs e)
         {
-            int balls = 0;
-            for (int i = 0; i < StackPanel_Test.Children.Count; i++)
-            {
-                foreach (Answer answerUI in test.Questions.ToList()[i].Answers.ToList())
-                {
-                    for (int j = 2; j < 5; j++)
-                    {
-                        if (((CheckBox)((StackPanel)StackPanel_Test.Children[i]).Children[j]).IsChecked == true)
-                        {
-                            if (((CheckBox)((StackPanel)StackPanel_Test.Children[i]).Children[j]).Content == answerUI.Text) balls++;
-                        }
-                    }
-                }
-            }
-            await _service1Client.AddResoultTestAsync(test.Id, CurrentUser.User.Id, balls);
+            //int balls = 0;
+            //for (int i = 0; i < StackPanel_Test.Children.Count; i++)
+            //{
+            //    foreach (Answer answerUI in test.Questions.ToList()[i].Answers.ToList())
+            //    {
+            //        for (int j = 2; j < 5; j++)
+            //        {
+            //            if (((CheckBox)((StackPanel)StackPanel_Test.Children[i]).Children[j]).IsChecked == true)
+            //            {
+            //                if (((CheckBox)((StackPanel)StackPanel_Test.Children[i]).Children[j]).Content == answerUI.Text) balls++;
+            //            }
+            //        }
+            //    }
+            //}
+            //await _service1Client.AddResoultTestAsync(test.Id, CurrentUser.User.Id, balls);
         }
     }
 }

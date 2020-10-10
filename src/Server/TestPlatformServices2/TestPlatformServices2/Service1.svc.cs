@@ -122,5 +122,20 @@ namespace TestPlatformServices2
 
             return true;
         }
+
+        public async Task<IEnumerable<Test>> LoadTests()
+        {
+            return await unitOfWork.Tests.GetAllAsync();
+        }
+
+        public async Task<IEnumerable<Question>> LoadQuestions(int testId)
+        {
+            return await unitOfWork.Questions.FindByConditionAsync(x=>x.TestId == testId);
+        }
+        public async Task<Test> GetTest(int testId)
+        {
+            var test = await unitOfWork.Tests.FindByConditionAsync(x => x.Id == testId);
+            return test.FirstOrDefault();
+        }
     }
 }

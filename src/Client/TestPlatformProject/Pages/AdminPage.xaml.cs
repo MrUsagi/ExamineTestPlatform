@@ -57,13 +57,23 @@ namespace TestPlatformProject.Pages
             this.NavigationService.Navigate(new ChangesTestPage(_service1Client));
         }
 
-        private void TestsLIstView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void TestsLIstView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if(TestsLIstView.SelectedItem != null)
             {
-                QuastionLIstView.Items.Clear();
-                QuastionLIstView.ItemsSource = (TestsLIstView.SelectedItem as Test).Questions;
+                this.DataContext = await _service1Client.GetTestAsync((TestsLIstView.SelectedItem as Test).Id);
+                //QuastionLIstView.Items.Clear();
+                QuastionLIstView.ItemsSource = null;
+                var questions = await _service1Client.LoadQuestionsAsync((TestsLIstView.SelectedItem as Test).Id);
+                QuastionLIstView.ItemsSource = questions;
+                //QuastionLIstView.ItemsSource = (TestsLIstView.SelectedItem as Test).Questions;
             }
+        }
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            var tests = await _service1Client.LoadTestsAsync();
+            TestsLIstView.ItemsSource = tests;
         }
     }
 }

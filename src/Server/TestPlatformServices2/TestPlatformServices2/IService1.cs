@@ -45,6 +45,15 @@ namespace TestPlatformServices2
         [OperationContract]
         Task<User> GetUser(string login);
 
+        [OperationContract]
+        Task<IEnumerable<Test>> LoadTests();
+
+        [OperationContract]
+        Task<IEnumerable<Question>> LoadQuestions(int testId);
+        
+        [OperationContract]
+        Task<Test> GetTest(int testId);
+
         // TODO: Добавьте здесь операции служб
     }
 

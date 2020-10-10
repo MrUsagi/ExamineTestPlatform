@@ -26,11 +26,7 @@ namespace ServiceReference1
         
         private string NameField;
         
-        private ServiceReference1.Question[] QuestionsField;
-        
         private int TryNumberField;
-        
-        private ServiceReference1.UserTest[] UsersField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Description
@@ -85,19 +81,6 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ServiceReference1.Question[] Questions
-        {
-            get
-            {
-                return this.QuestionsField;
-            }
-            set
-            {
-                this.QuestionsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public int TryNumber
         {
             get
@@ -109,19 +92,6 @@ namespace ServiceReference1
                 this.TryNumberField = value;
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ServiceReference1.UserTest[] Users
-        {
-            get
-            {
-                return this.UsersField;
-            }
-            set
-            {
-                this.UsersField = value;
-            }
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -129,8 +99,6 @@ namespace ServiceReference1
     [System.Runtime.Serialization.DataContractAttribute(Name="Question", Namespace="http://schemas.datacontract.org/2004/07/DataAccess.Models")]
     public partial class Question : object
     {
-        
-        private ServiceReference1.Answer[] AnswersField;
         
         private int IdField;
         
@@ -140,26 +108,11 @@ namespace ServiceReference1
         
         private bool IsRemoveField;
         
-        private ServiceReference1.Test TestField;
-        
         private int TestIdField;
         
         private string TextField;
         
         private int WeightField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ServiceReference1.Answer[] Answers
-        {
-            get
-            {
-                return this.AnswersField;
-            }
-            set
-            {
-                this.AnswersField = value;
-            }
-        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Id
@@ -214,19 +167,6 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ServiceReference1.Test Test
-        {
-            get
-            {
-                return this.TestField;
-            }
-            set
-            {
-                this.TestField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public int TestId
         {
             get
@@ -268,200 +208,6 @@ namespace ServiceReference1
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="UserTest", Namespace="http://schemas.datacontract.org/2004/07/DataAccess.Models")]
-    public partial class UserTest : object
-    {
-        
-        private int IdField;
-        
-        private int ResultField;
-        
-        private ServiceReference1.Test TestField;
-        
-        private int TestIdField;
-        
-        private ServiceReference1.User UserField;
-        
-        private int UserIdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Result
-        {
-            get
-            {
-                return this.ResultField;
-            }
-            set
-            {
-                this.ResultField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ServiceReference1.Test Test
-        {
-            get
-            {
-                return this.TestField;
-            }
-            set
-            {
-                this.TestField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TestId
-        {
-            get
-            {
-                return this.TestIdField;
-            }
-            set
-            {
-                this.TestIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ServiceReference1.User User
-        {
-            get
-            {
-                return this.UserField;
-            }
-            set
-            {
-                this.UserField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int UserId
-        {
-            get
-            {
-                return this.UserIdField;
-            }
-            set
-            {
-                this.UserIdField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Answer", Namespace="http://schemas.datacontract.org/2004/07/DataAccess.Models")]
-    public partial class Answer : object
-    {
-        
-        private int IdField;
-        
-        private bool IsCorrectField;
-        
-        private bool IsRemoveField;
-        
-        private ServiceReference1.Question QuestionField;
-        
-        private int QuestionIdField;
-        
-        private string TextField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsCorrect
-        {
-            get
-            {
-                return this.IsCorrectField;
-            }
-            set
-            {
-                this.IsCorrectField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsRemove
-        {
-            get
-            {
-                return this.IsRemoveField;
-            }
-            set
-            {
-                this.IsRemoveField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ServiceReference1.Question Question
-        {
-            get
-            {
-                return this.QuestionField;
-            }
-            set
-            {
-                this.QuestionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int QuestionId
-        {
-            get
-            {
-                return this.QuestionIdField;
-            }
-            set
-            {
-                this.QuestionIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Text
-        {
-            get
-            {
-                return this.TextField;
-            }
-            set
-            {
-                this.TextField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/DataAccess.Models")]
     public partial class User : object
     {
@@ -474,11 +220,7 @@ namespace ServiceReference1
         
         private bool IsAdminField;
         
-        private ServiceReference1.LoginUser LoginField;
-        
         private int LoginIdField;
-        
-        private ServiceReference1.UserTest[] TestsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Email
@@ -533,19 +275,6 @@ namespace ServiceReference1
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ServiceReference1.LoginUser Login
-        {
-            get
-            {
-                return this.LoginField;
-            }
-            set
-            {
-                this.LoginField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public int LoginId
         {
             get
@@ -555,101 +284,6 @@ namespace ServiceReference1
             set
             {
                 this.LoginIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ServiceReference1.UserTest[] Tests
-        {
-            get
-            {
-                return this.TestsField;
-            }
-            set
-            {
-                this.TestsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="LoginUser", Namespace="http://schemas.datacontract.org/2004/07/DataAccess.Models")]
-    public partial class LoginUser : object
-    {
-        
-        private int IdField;
-        
-        private string LoginField;
-        
-        private string PasswordField;
-        
-        private ServiceReference1.User UserField;
-        
-        private int UserIdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Login
-        {
-            get
-            {
-                return this.LoginField;
-            }
-            set
-            {
-                this.LoginField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Password
-        {
-            get
-            {
-                return this.PasswordField;
-            }
-            set
-            {
-                this.PasswordField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ServiceReference1.User User
-        {
-            get
-            {
-                return this.UserField;
-            }
-            set
-            {
-                this.UserField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int UserId
-        {
-            get
-            {
-                return this.UserIdField;
-            }
-            set
-            {
-                this.UserIdField = value;
             }
         }
     }
@@ -688,6 +322,15 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUser", ReplyAction="http://tempuri.org/IService1/GetUserResponse")]
         System.Threading.Tasks.Task<ServiceReference1.User> GetUserAsync(string login);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/LoadTests", ReplyAction="http://tempuri.org/IService1/LoadTestsResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.Test[]> LoadTestsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/LoadQuestions", ReplyAction="http://tempuri.org/IService1/LoadQuestionsResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.Question[]> LoadQuestionsAsync(int testId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTest", ReplyAction="http://tempuri.org/IService1/GetTestResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.Test> GetTestAsync(int testId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -788,6 +431,21 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<ServiceReference1.User> GetUserAsync(string login)
         {
             return base.Channel.GetUserAsync(login);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.Test[]> LoadTestsAsync()
+        {
+            return base.Channel.LoadTestsAsync();
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.Question[]> LoadQuestionsAsync(int testId)
+        {
+            return base.Channel.LoadQuestionsAsync(testId);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.Test> GetTestAsync(int testId)
+        {
+            return base.Channel.GetTestAsync(testId);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
