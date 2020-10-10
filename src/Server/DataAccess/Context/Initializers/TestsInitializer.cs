@@ -23,7 +23,9 @@ namespace DataAccess.Context.Initializers
                     Password = "root", //Нужна хеш версия, БЛЯТЬ
                 }
             });
-            
+            context.SaveChanges();
+
+            context.Tests.Add(new Test() { Name = "MyTest", Description = "fuck you", TryNumber = 5, IsRemove = false });
 
             context.SaveChanges();
         }

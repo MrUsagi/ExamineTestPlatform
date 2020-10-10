@@ -16,14 +16,19 @@ namespace TestPlatformServices2
     public class Service1 : IService1
     {
         private readonly UnitOfWork unitOfWork;
-        public User user;
+        private User _user;
         public Service1()
         {
             unitOfWork = UnitOfWork.GetInstance();
-            user = new User();
+            _user = new User();
         }
 
-        public async Task<bool> AddQuestion(Question question)
+        public async Task<User> GetUser()
+        {
+            return _user;
+        }
+
+            public async Task<bool> AddQuestion(Question question)
         {
             await unitOfWork.Questions.CreateAsync(new Question()
             {
@@ -84,7 +89,7 @@ namespace TestPlatformServices2
         {
             if ((await unitOfWork.Logins.FindByConditionAsync(x => x.Login == login && x.Password == password)).Any())
             {
-                user = (await unitOfWork.Users.FindByConditionAsync(x => x.Login.Login == login && x.Login.Password == password)).First();
+                _user = (await unitOfWork.Users.FindByConditionAsync(x => x.Login.Login == login && x.Login.Password == password)).First();
                 return true;
             }
 
@@ -105,6 +110,8 @@ namespace TestPlatformServices2
                 IsAdmin = false
             });
             await unitOfWork.SaveAsync();
+
+            _user = (await unitOfWork.Users.FindByConditionAsync(x => x.Login.Login == login && x.Login.Password == password)).First();
             return true;
         }
 

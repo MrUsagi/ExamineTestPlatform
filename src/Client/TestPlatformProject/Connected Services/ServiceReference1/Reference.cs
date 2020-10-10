@@ -685,6 +685,9 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetTests", ReplyAction="http://tempuri.org/IService1/GetTestsResponse")]
         System.Threading.Tasks.Task<ServiceReference1.Test[]> GetTestsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUser", ReplyAction="http://tempuri.org/IService1/GetUserResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.User> GetUserAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
@@ -780,6 +783,11 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<ServiceReference1.Test[]> GetTestsAsync()
         {
             return base.Channel.GetTestsAsync();
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.User> GetUserAsync()
+        {
+            return base.Channel.GetUserAsync();
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

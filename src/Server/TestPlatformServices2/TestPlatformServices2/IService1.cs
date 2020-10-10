@@ -42,6 +42,8 @@ namespace TestPlatformServices2
         [OperationContract]
         Task<List<Test>> GetTests();
 
+        [OperationContract]
+        Task<User> GetUser();
 
         // TODO: Добавьте здесь операции служб
     }
