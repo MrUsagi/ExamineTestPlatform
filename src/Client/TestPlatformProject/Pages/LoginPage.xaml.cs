@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestPlatformProject.Models;
 
 namespace TestPlatformProject.Pages
 {
@@ -31,7 +32,9 @@ namespace TestPlatformProject.Pages
         {
             if (await _service1Client.IsLoginAsync(LoginTextBoxInLogin.Text, PassTextBoxInLogin.Text))
             {
-                if(await _service1Client.IsAdminAsync(LoginTextBoxInLogin.Text))
+                var user = await _service1Client.GetUserAsync(LoginTextBoxInLogin.Text);
+                CurrentUser.User = user;
+                if (await _service1Client.IsAdminAsync(LoginTextBoxInLogin.Text))
                     this.NavigationService.Navigate(new AdminPage(_service1Client));
                 else this.NavigationService.Navigate(new UserPage(_service1Client));
             }

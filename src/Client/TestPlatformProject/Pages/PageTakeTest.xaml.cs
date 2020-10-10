@@ -14,6 +14,7 @@ using System.Windows.Media.TextFormatting;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DataAccess.ModelsUI;
+using TestPlatformProject.Models;
 
 namespace TestPlatformProject.Pages
 {
@@ -108,7 +109,7 @@ namespace TestPlatformProject.Pages
                     }
                 }
             }
-            await _service1Client.AddResoultTestAsync(test.Id,(await _service1Client.GetUserAsync()).Id, balls);
+            await _service1Client.AddResoultTestAsync(test.Id, CurrentUser.User.Id, balls);
         }
     }
 }

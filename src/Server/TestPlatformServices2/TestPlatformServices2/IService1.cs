@@ -43,7 +43,7 @@ namespace TestPlatformServices2
         Task<List<Test>> GetTests();
 
         [OperationContract]
-        Task<User> GetUser();
+        Task<User> GetUser(string login);
 
         // TODO: Добавьте здесь операции служб
     }

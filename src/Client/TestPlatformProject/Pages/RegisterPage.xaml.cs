@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestPlatformProject.Models;
 
 namespace TestPlatformProject.Pages
 {
@@ -32,7 +33,10 @@ namespace TestPlatformProject.Pages
             if (LoginTextBoxInRegister.Text != "")
             {
                 if ((await _service1Client.RegistrationAsync(PassTextBoxInRegister.Text, LoginTextBoxInRegister.Text, NameTextBoxInRegister.Text, EmailTextBoxInRegister.Text)))
+                {
+                    CurrentUser.User = await _service1Client.GetUserAsync(LoginTextBoxInRegister.Text);
                     this.NavigationService.Navigate(new UserPage(_service1Client));
+                }
             }
         }
     }

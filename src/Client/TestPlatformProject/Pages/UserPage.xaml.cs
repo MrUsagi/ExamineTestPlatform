@@ -49,7 +49,7 @@ namespace TestPlatformProject.Pages
 
         private void TestListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(((Test)TestListView.SelectedItem)!=null)TextBlockDescription.Text = ((Test)TestListView.SelectedItem).Description;
+            if(((Test)TestListView.SelectedItem)!=null) TextBlockDescription.Text = ((Test)TestListView.SelectedItem).Description;
         }
     }
 }
